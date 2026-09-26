@@ -142,3 +142,6 @@ src/
 - **State** shared across the app lives in `context/`; use the hooks `useUI()`, `useBookmarks()`, `useCart()`, `useAudio()`.
 - **Services** are framework-free and can be called from anywhere (e.g. `notify({ type, title, message })`).
 - Storage keys are unchanged from the HTML version, so saved bookmarks/cart carry over.
+
+
+- fix routes
