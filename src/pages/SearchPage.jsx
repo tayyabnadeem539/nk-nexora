@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import SearchFilters from '../components/search/SearchFilters.jsx';
 import SearchResultCard from '../components/search/SearchResultCard.jsx';
 import { searchQuery } from '../services/searchService.js';
@@ -15,7 +16,9 @@ function NoResults() {
   );
 }
 
-export default function SearchPage({ initialTerm = '' }) {
+export default function SearchPage() {
+  const [searchParams] = useSearchParams();
+  const initialTerm = searchParams.get('q') || '';
   const [term, setTerm] = useState(initialTerm);
   const [filters, setFilters] = useState(savedFilters);
 

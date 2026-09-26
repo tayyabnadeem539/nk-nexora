@@ -4,7 +4,7 @@
 export const LOCAL_VIDEO_IDS = ['Way9Dexny3w', 'a9tq0aS5Zu8', 'QdBZY2fkU-0', 'Jb_Z-3d6D8U'];
 
 /** Played instead when a trailer's own file is missing. */
-export const FALLBACK_VIDEO_SRCS = ['videos/Way9Dexny3w.mp4', 'videos/a9tq0aS5Zu8.mp4', 'videos/QdBZY2fkU-0.mp4', 'videos/bg.mp4'];
+export const FALLBACK_VIDEO_SRCS = ['/videos/Way9Dexny3w.mp4', '/videos/a9tq0aS5Zu8.mp4', '/videos/QdBZY2fkU-0.mp4', '/videos/bg.mp4'];
 
 /** Quick-search chips under the trailer search box. */
 export const POPULAR_CINEMA_TITLES = ['Dune: Part Two', 'Demon Slayer', 'GTA VI', 'One Piece Egghead', 'Chainsaw Man'];

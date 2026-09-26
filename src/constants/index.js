@@ -19,4 +19,4 @@ export const FALLBACK_MERCH_IMAGE = 'https://images.unsplash.com/photo-156308914
 export const FALLBACK_AUDIO_THUMB = 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80';
 
 /** Local trailer files live in public/videos and are named <youtubeId>.mp4 */
-export const videoSrc = (youtubeId) => `videos/${youtubeId}.mp4`;
+export const videoSrc = (youtubeId) => `/videos/${youtubeId}.mp4`;

@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import AboutFeatureGrid from '../components/about/AboutFeatureGrid.jsx';
 import AboutHero from '../components/about/AboutHero.jsx';
 import AboutSplitSection from '../components/about/AboutSplitSection.jsx';
 import { ABOUT_CATEGORIES, ABOUT_PROJECT_DETAILS } from '../constants/aboutContent.js';
+import { PATHS } from '../routes/paths.js';
 
 export default function AboutPage() {
   return (
@@ -32,7 +34,7 @@ export default function AboutPage() {
         </p>
         <div className="about-category-list">
           {ABOUT_CATEGORIES.map(([path, label]) => (
-            <a key={path} href={`#${path}`}>{label} <span>↗</span></a>
+            <Link key={path} to={PATHS.category(path)}>{label} <span>↗</span></Link>
           ))}
         </div>
       </AboutSplitSection>

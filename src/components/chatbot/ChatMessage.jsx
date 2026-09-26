@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ChevronRight } from '../common/Icons.jsx';
 
 export default function ChatMessage({ message, onAction }) {
@@ -10,10 +11,10 @@ export default function ChatMessage({ message, onAction }) {
     <div className="chat-msg chat-msg-bot">
       <p>{message.text}</p>
       {action?.label && action?.route && (
-        <a href={action.route} className="chat-action-btn" onClick={onAction}>
+        <Link to={action.route} className="chat-action-btn" onClick={onAction}>
           {action.label}
           <ChevronRight />
-        </a>
+        </Link>
       )}
     </div>
   );

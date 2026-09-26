@@ -1,13 +1,15 @@
+import { Link, NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../../constants/navigation.js';
 import { useBookmarks } from '../../context/BookmarksContext.jsx';
 import { useCart } from '../../context/CartContext.jsx';
 import { useUI } from '../../context/UIContext.jsx';
+import { pathFor, PATHS } from '../../routes/paths.js';
 import { notify } from '../../services/notificationService.js';
 import { BookmarkIcon, CartIcon, MenuIcon } from '../common/Icons.jsx';
 import HeaderSearch from './HeaderSearch.jsx';
 import LiveClock from './LiveClock.jsx';
 
-export default function Header({ activePath }) {
+export default function Header() {
   const { bookmarks } = useBookmarks();
   const { totals, openCart } = useCart();
   const { loggedIn, openMobileMenu } = useUI();
@@ -31,20 +33,20 @@ export default function Header({ activePath }) {
       {/* Main header row */}
       <div className="container">
         <div className="header-main-row">
-          <a href="#home" className="brand-logo" aria-label="FandomVerse Home">
+          <Link to={PATHS.home} className="brand-logo" aria-label="FandomVerse Home">
             <div className="brand-icon-box">★</div>
             <div className="brand-text-wrap">
               <span className="brand-title">FANDOM<span>VERSE</span></span>
             </div>
-          </a>
+          </Link>
 
           <HeaderSearch />
 
           <div className="header-actions">
-            <a href="#bookmarks" className="action-btn" title="Saved Bookmarks" aria-label="Bookmarks">
+            <Link to={PATHS.bookmarks} className="action-btn" title="Saved Bookmarks" aria-label="Bookmarks">
               <BookmarkIcon size={18} />
               {bookmarks.length > 0 && <span className="badge-count bookmark-badge-counter" style={{ display: 'flex' }}>{bookmarks.length}</span>}
-            </a>
+            </Link>
 
             <button type="button" className="action-btn" onClick={openCart} title="Merchandise Demo Cart" aria-label="Shopping Cart">
               <CartIcon />
@@ -72,7 +74,7 @@ export default function Header({ activePath }) {
           <ul className="nav-links-list">
             {NAV_LINKS.map(([path, label]) => (
               <li key={path}>
-                <a href={`#${path}`} className={`nav-link-item ${activePath === path ? 'active' : ''}`}>{label}</a>
+                <NavLink to={pathFor(path)} end={path === 'home'} className="nav-link-item">{label}</NavLink>
               </li>
             ))}
           </ul>

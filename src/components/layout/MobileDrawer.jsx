@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { DRAWER_HUB_LINKS, DRAWER_TOOL_LINKS } from '../../constants/navigation.js';
 import { useBookmarks } from '../../context/BookmarksContext.jsx';
 import { useUI } from '../../context/UIContext.jsx';
+import useBreadcrumbs from '../../hooks/useBreadcrumbs.js';
+import { pathFor, PATHS } from '../../routes/paths.js';
 import { PinIcon, SearchIcon, UserIcon } from '../common/Icons.jsx';
 import Breadcrumbs from './Breadcrumbs.jsx';
 
-function DrawerLink({ link, active, bookmarkCount, onClick }) {
+function DrawerLink({ link, bookmarkCount, onClick }) {
   let trailing = <span className="nav-arrow">&rarr;</span>;
   if (link.badge) {
     trailing = <span className="nav-badge-pill" style={{ borderColor: link.badge.borderColor, color: link.badge.color }}>{link.badge.text}</span>;
@@ -16,28 +19,30 @@ function DrawerLink({ link, active, bookmarkCount, onClick }) {
   }
 
   return (
-    <a href={`#${link.path}`} className={`mobile-nav-link ${active ? 'active' : ''}`} onClick={onClick}>
+    <NavLink to={pathFor(link.path)} end={link.path === 'home'} className="mobile-nav-link" onClick={onClick}>
       <span className="link-label"><span className="nav-link-icon">{link.icon}</span> {link.label}</span>
       {trailing}
-    </a>
+    </NavLink>
   );
 }
 
-export default function MobileDrawer({ activePath, breadcrumbs }) {
+export default function MobileDrawer() {
   const { mobileMenuOpen, closeMobileMenu, openAuthModal } = useUI();
   const { bookmarks } = useBookmarks();
+  const breadcrumbs = useBreadcrumbs();
+  const navigate = useNavigate();
   const [query, setQuery] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
     const q = query.trim();
     if (!q) return;
-    window.location.hash = 'search?q=' + encodeURIComponent(q);
+    navigate(PATHS.search(q));
     closeMobileMenu();
   };
 
   const renderLinks = (links) => links.map(link => (
-    <DrawerLink key={link.path} link={link} active={activePath === link.path} bookmarkCount={bookmarks.length} onClick={closeMobileMenu} />
+    <DrawerLink key={link.path} link={link} bookmarkCount={bookmarks.length} onClick={closeMobileMenu} />
   ));
 
   return (
@@ -45,12 +50,12 @@ export default function MobileDrawer({ activePath, breadcrumbs }) {
       <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'active' : ''}`} onClick={closeMobileMenu} />
       <aside className={`mobile-nav-drawer ${mobileMenuOpen ? 'active' : ''}`} aria-label="Mobile Navigation">
         <div className="mobile-drawer-header">
-          <a href="#home" className="brand-logo" onClick={closeMobileMenu} aria-label="FandomVerse Home">
+          <Link to={PATHS.home} className="brand-logo" onClick={closeMobileMenu} aria-label="FandomVerse Home">
             <div className="brand-icon-box">★</div>
             <div className="brand-text-wrap">
               <span className="brand-title">FANDOM<span>VERSE</span></span>
             </div>
-          </a>
+          </Link>
           <button type="button" className="mobile-drawer-close-btn" aria-label="Close Menu" onClick={closeMobileMenu}>✕</button>
         </div>
 

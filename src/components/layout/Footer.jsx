@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { FOOTER_HUB_LINKS } from '../../constants/navigation.js';
+import { pathFor } from '../../routes/paths.js';
 import { useUI } from '../../context/UIContext.jsx';
 import { exportBookmarks } from '../../services/bookmarkExport.js';
 
@@ -36,18 +38,18 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Fandom Hubs</div>
             <ul className="footer-links-list">
-              {FOOTER_HUB_LINKS.map(([path, label]) => <li key={path}><a href={`#${path}`}>{label}</a></li>)}
+              {FOOTER_HUB_LINKS.map(([path, label]) => <li key={path}><Link to={pathFor(path)}>{label}</Link></li>)}
             </ul>
           </div>
 
           <div>
             <div className="footer-col-title">Explore & Tools</div>
             <ul className="footer-links-list">
-              <li><a href="#trailers">Trailers & Media Hub</a></li>
-              <li><a href="#events">Conventions & Events</a></li>
-              <li><a href="#merch">Merchandise Store</a></li>
-              <li><a href="#bookmarks">Saved Bookmarks</a></li>
-              <li><a href="#search">Global Search Engine</a></li>
+              <li><Link to={pathFor('trailers')}>Trailers & Media Hub</Link></li>
+              <li><Link to={pathFor('events')}>Conventions & Events</Link></li>
+              <li><Link to={pathFor('merch')}>Merchandise Store</Link></li>
+              <li><Link to={pathFor('bookmarks')}>Saved Bookmarks</Link></li>
+              <li><Link to={pathFor('search')}>Global Search Engine</Link></li>
               <li><ActionLink onClick={toggleChat}>Fandom Guide Assistant</ActionLink></li>
             </ul>
           </div>
@@ -55,10 +57,10 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">TechWiz 7</div>
             <ul className="footer-links-list">
-              <li><a href="#about">Project Overview</a></li>
-              <li><a href="#about">SRS Compliance v1.0</a></li>
-              <li><a href="#contact">Team Contact</a></li>
-              <li><a href="#about">Aptech Limited</a></li>
+              <li><Link to={pathFor('about')}>Project Overview</Link></li>
+              <li><Link to={pathFor('about')}>SRS Compliance v1.0</Link></li>
+              <li><Link to={pathFor('contact')}>Team Contact</Link></li>
+              <li><Link to={pathFor('about')}>Aptech Limited</Link></li>
               <li><ActionLink onClick={exportBookmarks}>Export Data (.md)</ActionLink></li>
             </ul>
           </div>
@@ -75,10 +77,10 @@ export default function Footer() {
           <div className="footer-bottom-flex">
             <div>&copy; 2026 FandomVerse Portal • All right reserved.</div>
             <div style={{ display: 'flex', gap: 16 }}>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-              <a href="#search">Search</a>
+              <Link to={pathFor('home')}>Home</Link>
+              <Link to={pathFor('about')}>About</Link>
+              <Link to={pathFor('contact')}>Contact</Link>
+              <Link to={pathFor('search')}>Search</Link>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ const FANDOM_DATA = {
       "title": "Anime",
       "tagline": "Japanese Animation, Studio Masterpieces & Seasonal Premieres",
       "description": "Immerse yourself in world-class anime storytelling, from epic shonen battles and dark fantasy epics to heartwarming slice-of-life adventures. Discover seasonal broadcast guides, legendary creator spotlights, and exclusive character archives.",
-      "banner": "images/anime-bg.png",
+      "banner": "/images/anime-bg.png",
       "color": "#E50914",
       "icon": "sparkles",
       "stats": {
@@ -31,7 +31,7 @@ const FANDOM_DATA = {
       "title": "Gaming",
       "tagline": "Next-Gen Releases, RPG Epics, Hardware & Esports",
       "description": "Your headquarters for comprehensive gaming culture. Explore AAA blockbuster previews, deep indie game retrospectives, esports tournament schedules, speedrunning milestones, and deep franchise worldbuilding.",
-      "banner": "images/gaming-bg.png",
+      "banner": "/images/gaming-bg.png",
       "color": "#10B981",
       "icon": "gamepad",
       "stats": {
@@ -56,7 +56,7 @@ const FANDOM_DATA = {
       "title": "Movies",
       "tagline": "Cinematic Universes, Blockbuster Premieres & Auteur Cinema",
       "description": "From sprawling sci-fi epics and superhero spectacles to genre-defining thrillers. Get backstage production secrets, director commentaries, box office trackers, and festival award circuits.",
-      "banner": "images/movies-bg.png",
+      "banner": "/images/movies-bg.png",
       "color": "#F59E0B",
       "icon": "film",
       "stats": {
@@ -80,7 +80,7 @@ const FANDOM_DATA = {
       "title": "TV Shows",
       "tagline": "Prestige Dramas, Streaming Sensations & Episodic Sagas",
       "description": "Dive deep into modern golden-age television. Detailed episode recaps, showrunner interviews, season renewals, fan lore theories, and community watch parties across major streaming networks.",
-      "banner": "images/tvshows-bg.png",
+      "banner": "/images/tvshows-bg.png",
       "color": "#8B5CF6",
       "icon": "tv",
       "stats": {
@@ -104,7 +104,7 @@ const FANDOM_DATA = {
       "title": "K-Pop",
       "tagline": "Global Idols, Chart-Topping Comebacks & Fandom Culture",
       "description": "Celebrate the global phenomenon of Korean pop music. Explore world tour dates, comeback concept analyses, choreography breakdowns, member profiles, and lightstick merchandise showcases.",
-      "banner": "images/kpop-bg.png",
+      "banner": "/images/kpop-bg.png",
       "color": "#EC4899",
       "icon": "music",
       "stats": {
@@ -129,7 +129,7 @@ const FANDOM_DATA = {
       "title": "Comics",
       "tagline": "Iconic Graphic Novels, Multiverse Lore & Indie Spotlights",
       "description": "Explore the vast universe of western comics, graphic novels, and underground indie press. Follow major crossover arcs, legendary writer/artist runs, rare variant covers, and convention highlights.",
-      "banner": "images/comics-bg.png",
+      "banner": "/images/comics-bg.png",
       "color": "#3B82F6",
       "icon": "book-open",
       "stats": {
@@ -153,7 +153,7 @@ const FANDOM_DATA = {
       "title": "Manga",
       "tagline": "Legendary Serializations, Mangaka Spotlights & Tankobon Editions",
       "description": "The definitive library for Japanese comic literature. Discover weekly serialized chapters, author retrospectives, collector box sets, award-winning translations, and adaptation announcements.",
-      "banner": "images/manga-bg.png",
+      "banner": "/images/manga-bg.png",
       "color": "#F97316",
       "icon": "bookmark",
       "stats": {
@@ -1290,7 +1290,7 @@ const FANDOM_DATA = {
       "franchise": "One Piece",
       "price": 68,
       "priceRange": "$65.00 - $75.00",
-      "image": "images/onepiece-gear5-figure.jpg",
+      "image": "/images/onepiece-gear5-figure.jpg",
       "description": "Officially licensed Bandai Spirits masterpiece sculpt capturing Luffy in full Sun God Nika awakening with pearlized cloud hair and dynamic base.",
       "inStock": true,
       "rating": 4.9,
@@ -1304,7 +1304,7 @@ const FANDOM_DATA = {
       "franchise": "Jujutsu Kaisen",
       "price": 52,
       "priceRange": "$48.00 - $55.00",
-      "image": "images/gojo-hoodie.jpg",
+      "image": "/images/gojo-hoodie.jpg",
       "description": "Heavyweight 400 GSM brushed fleece hoodie featuring Gojo's iconic Infinite Void eye embroidery and minimalist Japanese kanji print.",
       "inStock": true,
       "rating": 4.8,
@@ -1318,7 +1318,7 @@ const FANDOM_DATA = {
       "franchise": "The Witcher",
       "price": 45,
       "priceRange": "$40.00 - $50.00",
-      "image": "images/witcher-medallion.jpg",
+      "image": "/images/witcher-medallion.jpg",
       "description": "Zinc alloy cast School of the Wolf medallion complete with glowing red LED ocular sensors and 30-inch stainless steel link chain.",
       "inStock": true,
       "rating": 4.9,
@@ -1332,7 +1332,7 @@ const FANDOM_DATA = {
       "franchise": "Elden Ring",
       "price": 185,
       "priceRange": "$180.00 - $195.00",
-      "image": "images/elden-ring-ranni-statue.jpeg",
+      "image": "/images/elden-ring-ranni-statue.jpeg",
       "description": "Exquisite 1/7 scale collector's figure featuring translucent spirit face detailing, fabric witch hat, and glowing dark moon crystal base.",
       "inStock": true,
       "rating": 5,
@@ -1346,7 +1346,7 @@ const FANDOM_DATA = {
       "franchise": "The Dark Knight",
       "price": 120,
       "priceRange": "$115.00 - $130.00",
-      "image": "images/batmobile.jpg",
+      "image": "/images/batmobile.jpg",
       "description": "Collector's edition die-cast vehicle featuring opening cockpit canopy, rotating dual machine guns, rubber off-road tires, and display plinth.",
       "inStock": true,
       "rating": 4.8,
@@ -1360,7 +1360,7 @@ const FANDOM_DATA = {
       "franchise": "Dune",
       "price": 79,
       "priceRange": "$75.00 - $85.00",
-      "image": "images/dune-crysknife.jpg",
+      "image": "/images/dune-crysknife.jpg",
       "description": "Full-scale resin reproduction carved with authentic sandworm tooth ridges, leather wrap grip, and Fremen ceremonial sheath.",
       "inStock": false,
       "rating": 4.7,
@@ -1667,7 +1667,7 @@ const FANDOM_DATA = {
       "franchise": "Chainsaw Man",
       "duration": "1:45",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/chainsaw-reze.jpg",
+      "thumbnail": "/images/chainsaw-reze.jpg",
       "youtubeId": "a9tq0aS5Zu8",
       "description": "Witness the explosive first look at Denji and Reze..."
     },
@@ -1679,7 +1679,7 @@ const FANDOM_DATA = {
       "franchise": "Demon Slayer",
       "duration": "2:30",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/next-trailer.jpg",
+      "thumbnail": "/images/next-trailer.jpg",
       "youtubeId": "a9tq0aS5Zu8",
       "description": "Ufotable reveals the unprecedented theatrical trilogy adapting the ultimate confrontation inside Muzan's shifting Infinity Castle."
     },
@@ -1691,7 +1691,7 @@ const FANDOM_DATA = {
       "franchise": "One Piece",
       "duration": "1:55",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb3.jpg",
+      "thumbnail": "/images/thumb3.jpg",
       "youtubeId": "trailer3",
       "description": "Toei Animation pushes the boundary of modern anime with Luffy's Gear 5 facing Admiral Kizaru on future island Egghead."
     },
@@ -1703,7 +1703,7 @@ const FANDOM_DATA = {
       "franchise": "Jujutsu Kaisen",
       "duration": "18:20",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb4.jpg",
+      "thumbnail": "/images/thumb4.jpg",
       "youtubeId": "trailer4",
       "description": "Lead directors and key animators break down the intricate camera choreographies and sound design of the Shibuya Incident arc."
     },
@@ -1715,8 +1715,8 @@ const FANDOM_DATA = {
       "franchise": "Anime Community",
       "duration": "45:15",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb5.jpg",
-      "audioUrl": "audio/audio5.mp3",
+      "thumbnail": "/images/thumb5.jpg",
+      "audioUrl": "/audio/audio5.mp3",
       "description": "Our weekly audio roundtable analyzing the top 10 seasonal premieres, manga divergence debates, and sakuga animators to watch."
     },
     {
@@ -1727,7 +1727,7 @@ const FANDOM_DATA = {
       "franchise": "Anime Expo",
       "duration": "6:40",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb6.jpg",
+      "thumbnail": "/images/thumb6.jpg",
       "youtubeId": "trailer6",
       "description": "Team Japan's breathtaking live theatrical cosplay skit recreating the climactic battle from Fullmetal Alchemist: Brotherhood."
     },
@@ -1739,7 +1739,7 @@ const FANDOM_DATA = {
       "franchise": "Grand Theft Auto",
       "duration": "2:10",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb7.jpg",
+      "thumbnail": "/images/thumb7.jpg",
       "youtubeId": "QdBZY2fkU-0",
       "description": "Rockstar Games returns to the neon-soaked highways of Vice City with Lucia and Jason in this record-breaking visual showcase."
     },
@@ -1751,7 +1751,7 @@ const FANDOM_DATA = {
       "franchise": "Ghost of Tsushima",
       "duration": "2:54",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb8.jpg",
+      "thumbnail": "/images/thumb8.jpg",
       "youtubeId": "trailer8",
       "description": "Sucker Punch unveils their next open-world samurai masterpiece set 300 years after Jin Sakai's legend around Mount Yotei in 1603."
     },
@@ -1763,7 +1763,7 @@ const FANDOM_DATA = {
       "franchise": "Elden Ring",
       "duration": "3:12",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb9.jpg",
+      "thumbnail": "/images/thumb9.jpg",
       "youtubeId": "trailer9",
       "description": "Journey into the Land of Shadow guided by Empyrean Miquella in FromSoftware's critically acclaimed colossal expansion."
     },
@@ -1775,7 +1775,7 @@ const FANDOM_DATA = {
       "franchise": "FromSoftware",
       "duration": "24:10",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb10.jpg",
+      "thumbnail": "/images/thumb10.jpg",
       "youtubeId": "trailer10",
       "description": "A rare in-depth conversation exploring environmental storytelling, mystery in game design, and player resilience."
     },
@@ -1787,7 +1787,7 @@ const FANDOM_DATA = {
       "franchise": "Gaming Industry",
       "duration": "38:40",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb11.jpg",
+      "thumbnail": "/images/thumb11.jpg",
       "audioUrl": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",
       "description": "Audio directors from Santa Monica Studio and CD Projekt Red debate spatial audio, dynamic orchestral stems, and silence as a storytelling tool."
     },
@@ -1799,7 +1799,7 @@ const FANDOM_DATA = {
       "franchise": "Speedrunning",
       "duration": "14:22",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb12.jpg",
+      "thumbnail": "/images/thumb12.jpg",
       "youtubeId": "trailer12",
       "description": "A documentary breakdown of how one runner executed frame-perfect BLJs to shatter the seemingly unbreakable 120-star world record."
     },
@@ -1811,7 +1811,7 @@ const FANDOM_DATA = {
       "franchise": "Dune",
       "duration": "3:40",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb13.jpg",
+      "thumbnail": "/images/thumb13.jpg",
       "youtubeId": "Way9Dexny3w",
       "description": "Denis Villeneuve and Hans Zimmer join forces to present Paul Atreides summoning and mounting the monumental Grandfather worm."
     },
@@ -1823,7 +1823,7 @@ const FANDOM_DATA = {
       "franchise": "The Batman",
       "duration": "1:30",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb14.jpg",
+      "thumbnail": "/images/thumb14.jpg",
       "youtubeId": "trailer13",
       "description": "Matt Reeves returns to Gotham's flooded underbelly as Robert Pattinson's Batman uncovers deeper layers of institutional corruption."
     },
@@ -1835,7 +1835,7 @@ const FANDOM_DATA = {
       "franchise": "Gladiator",
       "duration": "3:05",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb15.jpg",
+      "thumbnail": "/images/thumb15.jpg",
       "youtubeId": "trailer14",
       "description": "Ridley Scott returns to the Colosseum with Paul Mescal, Pedro Pascal, and Denzel Washington in a thunderous tale of imperial vengeance."
     },
@@ -1847,7 +1847,7 @@ const FANDOM_DATA = {
       "franchise": "Cinema Masters",
       "duration": "21:30",
       "releaseStatus": "released",
-      "thumbnail": "images/thumbnail16.jpg",
+      "thumbnail": "/images/thumbnail16.jpg",
       "youtubeId": "trailer15",
       "description": "An exclusive filmmaker breakdown on the physical sensory impact of genuine large-format celluloid over modern digital compression."
     },
@@ -1859,8 +1859,8 @@ const FANDOM_DATA = {
       "franchise": "Film Criticism",
       "duration": "52:10",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb17.jpg",
-      "audioUrl": "audio/audio6.mp3",
+      "thumbnail": "/images/thumb17.jpg",
+      "audioUrl": "/audio/audio6.mp3",
       "description": "Film festival programmers dissect box office returns, original IP resurgence, and why theatrical shared experiences remain irreplaceable."
     },
     {
@@ -1871,7 +1871,7 @@ const FANDOM_DATA = {
       "franchise": "Blade Runner",
       "duration": "11:05",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb18.jpg",
+      "thumbnail": "/images/thumb18.jpg",
       "youtubeId": "trailer16",
       "description": "High-definition archival footage revealing Weta Workshop's handcrafted Los Angeles miniature towers and optical lighting plates."
     },
@@ -1883,7 +1883,7 @@ const FANDOM_DATA = {
       "franchise": "Stranger Things",
       "duration": "2:04",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb19.jpg",
+      "thumbnail": "/images/thumb19.jpg",
       "youtubeId": "trailer17",
       "description": "The Duffer Brothers give fans an emotional glimpse of production on the fifth and final season of the global Hawkins phenomenon."
     },
@@ -1895,7 +1895,7 @@ const FANDOM_DATA = {
       "franchise": "House of the Dragon",
       "duration": "16:45",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb20.jpg",
+      "thumbnail": "/images/thumb20.jpg",
       "youtubeId": "trailer18",
       "description": "Showrunner Ryan Condal and VFX supervisors analyze the aerial dragon dogfight between Vhagar, Meleys, and Sunfyre."
     },
@@ -1907,7 +1907,7 @@ const FANDOM_DATA = {
       "franchise": "The Last of Us",
       "duration": "1:48",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb21.jpg",
+      "thumbnail": "/images/thumb21.jpg",
       "youtubeId": "trailer19",
       "description": "Pedro Pascal and Bella Ramsey return as Joel and Ellie five years after their journey across America, facing Abby and the Seraphites."
     },
@@ -1919,7 +1919,7 @@ const FANDOM_DATA = {
       "franchise": "Breaking Bad Universe",
       "duration": "29:15",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb22.jpg",
+      "thumbnail": "/images/thumb22.jpg",
       "youtubeId": "trailer20",
       "description": "Master storyteller Vince Gilligan details character morality arcs, color theory in wardrobe, and the craft of television tension."
     },
@@ -1931,7 +1931,7 @@ const FANDOM_DATA = {
       "franchise": "Streaming Culture",
       "duration": "41:30",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb23.jpg",
+      "thumbnail": "/images/thumb23.jpg",
       "audioUrl": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",
       "description": "Analyzing social media engagement spikes for weekly releases versus all-at-once binge drops across HBO, Netflix, and Disney+."
     },
@@ -1943,7 +1943,7 @@ const FANDOM_DATA = {
       "franchise": "Peaky Blinders",
       "duration": "8:50",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb24.jpg",
+      "thumbnail": "/images/thumb24.jpg",
       "youtubeId": "trailer21",
       "description": "Alfie Solomons offers a cynical apology to Arthur Shelby for past betrayals, claiming the actions were merely business."
     },
@@ -1955,7 +1955,7 @@ const FANDOM_DATA = {
       "franchise": "aespa",
       "duration": "3:30",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb25.jpg",
+      "thumbnail": "/images/thumb25.jpg",
       "youtubeId": "trailer22",
       "description": "SM Entertainment's sci-fi maximalism reaches new heights with groundbreaking CGI multiverse worldbuilding and hip-hop dance breaks."
     },
@@ -1967,7 +1967,7 @@ const FANDOM_DATA = {
       "franchise": "NewJeans",
       "duration": "3:15",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb26.jpg",
+      "thumbnail": "/images/thumb26.jpg",
       "youtubeId": "trailer23",
       "description": "Featuring nostalgic New Jack Swing rhythms, street dance choreography, and collaborations with contemporary artist Takashi Murakami."
     },
@@ -1979,7 +1979,7 @@ const FANDOM_DATA = {
       "franchise": "BTS",
       "duration": "4:02",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb27.jpg",
+      "thumbnail": "/images/thumb27.jpg",
       "youtubeId": "trailer24",
       "description": "Watch Jungkook and elite dancers execute electrifying Michael Jackson-inspired syncopation in 4K studio clarity."
     },
@@ -1991,7 +1991,7 @@ const FANDOM_DATA = {
       "franchise": "K-Pop Industry",
       "duration": "22:15",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb28.jpg",
+      "thumbnail": "/images/thumb28.jpg",
       "youtubeId": "trailer25",
       "description": "Top songwriters, mixing engineers, and creative directors pull back the curtain on song selection camps and visual concepts."
     },
@@ -2003,8 +2003,8 @@ const FANDOM_DATA = {
       "franchise": "K-Pop Culture",
       "duration": "48:00",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb29.jpg",
-      "audioUrl": "audio/audio7.mp3",
+      "thumbnail": "/images/thumb29.jpg",
+      "audioUrl": "/audio/audio7.mp3",
       "description": "Critiquing the evolution of K-Pop choruses, UK garage drum patterns, and international stadium touring demographics."
     },
     {
@@ -2015,7 +2015,7 @@ const FANDOM_DATA = {
       "franchise": "Stray Kids",
       "duration": "5:18",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb30.jpg",
+      "thumbnail": "/images/thumb30.jpg",
       "youtubeId": "trailer26",
       "description": "An award-winning viral fan tribute recreating the Michelin-star kinetic kitchen choreography with stunning prop fidelity."
     },
@@ -2027,7 +2027,7 @@ const FANDOM_DATA = {
       "franchise": "Marvel Comics",
       "duration": "2:05",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb31.jpg",
+      "thumbnail": "/images/thumb31.jpg",
       "youtubeId": "trailer27",
       "description": "Jonathan Hickman and Marco Checchetto unveil the bold reimagining of Earth-6160 with an adult, married Peter Parker."
     },
@@ -2039,7 +2039,7 @@ const FANDOM_DATA = {
       "franchise": "DC Comics",
       "duration": "2:40",
       "releaseStatus": "upcoming",
-      "thumbnail": "images/thumb32.jpg",
+      "thumbnail": "/images/thumb32.jpg",
       "youtubeId": "trailer28",
       "description": "Scott Snyder introduces the Absolute Universe, presenting raw, underdog iterations of Batman, Superman, and Wonder Woman."
     },
@@ -2051,7 +2051,7 @@ const FANDOM_DATA = {
       "franchise": "Image Comics",
       "duration": "34:50",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb33.jpg",
+      "thumbnail": "/images/thumb33.jpg",
       "youtubeId": "trailer29",
       "description": "The legendary artist demonstrates his dynamic cape inks while giving masterclass advice to prospective indie cartoonists."
     },
@@ -2063,7 +2063,7 @@ const FANDOM_DATA = {
       "franchise": "DC Comics",
       "duration": "27:10",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb34.jpg",
+      "thumbnail": "/images/thumb34.jpg",
       "youtubeId": "trailer30",
       "description": "DC Chief Creative Officer Jim Lee breaks down anatomy cross-hatching, silhouette balance, and visual momentum in comic storytelling."
     },
@@ -2075,8 +2075,8 @@ const FANDOM_DATA = {
       "franchise": "Comic Book History",
       "duration": "49:30",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb35.jpg",
-      "audioUrl": "audio/audio8.mp3",
+      "thumbnail": "/images/thumb35.jpg",
+      "audioUrl": "/audio/audio8.mp3",
       "description": "Archivists and comic store owners debate the physical collector market, comic restoration, and milestone key issues."
     },
     {
@@ -2087,7 +2087,7 @@ const FANDOM_DATA = {
       "franchise": "Spider-Man",
       "duration": "7:15",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb36.jpg",
+      "thumbnail": "/images/thumb36.jpg",
       "youtubeId": "trailer31",
       "description": "A voice-acted and 2.5D animated adaptation of Todd McFarlane's iconic Torment comic pages with atmospheric soundscapes."
     },
@@ -2099,7 +2099,7 @@ const FANDOM_DATA = {
       "franchise": "Berserk",
       "duration": "3:45",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb37.jpg",
+      "thumbnail": "/images/thumb37.jpg",
        "youtubeId": "trailer32",
       "description": "Studio Eclypse showcases their faithful 2D hand-drawn animation honoring Kentaro Miura's legendary dark fantasy manga pages."
     },
@@ -2111,7 +2111,7 @@ const FANDOM_DATA = {
       "franchise": "One Piece",
       "duration": "19:40",
       "releaseStatus": "released",
-       "thumbnail": "images/thumb38.jpg",
+       "thumbnail": "/images/thumb38.jpg",
       "youtubeId": "trailer33",
       "description": "Take a rare look inside the workplace of manga's most prolific author as he describes his daily 18-hour drawing routine and story sketches."
     },
@@ -2123,7 +2123,7 @@ const FANDOM_DATA = {
       "franchise": "Chainsaw Man",
       "duration": "15:20",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb39.jpg",
+      "thumbnail": "/images/thumb39.jpg",
       "youtubeId": "trailer34",
       "description": "An analytical deep-dive into Fujimoto's cinematic paneling, love of B-movies, and philosophical absurdity in modern manga."
     },
@@ -2135,7 +2135,7 @@ const FANDOM_DATA = {
       "franchise": "Vinland Saga",
       "duration": "4:12",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb40.jpg",
+      "thumbnail": "/images/thumb40.jpg",
       "youtubeId": "trailer35",
       "description": "Author Makoto Yukimura reflects on the transition from violent revenge epic to profound farming and redemption manga."
     },
@@ -2147,8 +2147,8 @@ const FANDOM_DATA = {
       "franchise": "Manga Industry",
       "duration": "43:50",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb41.jpg",
-       "audioUrl": "audio/audio9.mp3",
+      "thumbnail": "/images/thumb41.jpg",
+       "audioUrl": "/audio/audio9.mp3",
       "description": "Publishing editors discuss Shonen Jump+ digital success, webtoon vertical formats, and international simultaneous translations."
     },
     {
@@ -2159,7 +2159,7 @@ const FANDOM_DATA = {
       "franchise": "Spy x Family",
       "duration": "5:30",
       "releaseStatus": "released",
-      "thumbnail": "images/thumb42.jpg",
+      "thumbnail": "/images/thumb42.jpg",
       "youtubeId": "trailer36",
       "description": "A lovingly colored and animated digital presentation of Tatsuya Endo's most heartwarming milestone chapter."
     }
@@ -2180,7 +2180,7 @@ const FANDOM_DATA = {
       "author": "Kenji Sato",
       "date": "September 18, 2026",
       "readTime": "7 min read",
-      "image": "images/trending-anime.jpg",
+      "image": "/images/trending-anime.jpg",
       "summary": "An in-depth analysis of how shifting industry paradigms, digital hand-drawn hybrid pipelines, and high-budget seasonal releases revolutionized contemporary anime.",
       "content": "Japanese animation is experiencing a golden age of technical virtuosity. For decades, the traditional television anime pipeline was notorious for strict budget constraints and tight drawing schedules. Today, however, studios such as MAPPA and Ufotable have fundamentally rewritten the playbook through sophisticated digital compositing and visionary key animators.\n\nAt Ufotable, the secret lies in seamless digital integration. Rather than treating 3D background modeling as a cost-cutting shortcut, their digital division crafts three-dimensional environments through which hand-drawn characters navigate with breathtaking dynamic camera work. Demon Slayer's iconic Hinokami Kagura sequences are testament to this craft, blending 2D charcoal calligraphy textures with 3D fluid simulations.\n\nMeanwhile, MAPPA has championed individual animator expression. Director Sunghoo Park and his successors have given freelance prodigies the freedom to experiment with kinetic distortion, fish-eye perspective shots, and impactful smear frames. This artistic autonomy was on full display during the Shibuya Incident arc of Jujutsu Kaisen, proving that serialized television can rival feature films in sheer cinematic grandeur.",
       "relatedIds": [
@@ -2204,7 +2204,7 @@ const FANDOM_DATA = {
       "author": "Elena Rostova",
       "date": "September 12, 2026",
       "readTime": "6 min read",
-      "image": "images/onepiece.jpg",
+      "image": "/images/onepiece.jpg",
       "summary": "Tracing the thematic, mythological, and visual motifs that built toward Luffy's liberation warrior awakening in the Wano Country climax.",
       "content": "When Monkey D. Luffy transformed into the Warrior of Liberation atop Onigashima, it sent shockwaves across global fandom. While some casual observers assumed Gear 5 was a spontaneous power-up, seasoned lore scholars recognized the culmination of a narrative thread spanning over two decades.\n\nThe earliest visual motif appeared during the Skypiea arc around a celebratory campfire. Luffy danced against the moonlight in the exact silhouetted posture that would later define his Gear 5 announcement spread. Furthermore, references to the Sun God were woven through Shandian prayer, Fishman Island lore, and the tragic liberation march of the Sun Pirates led by Fisher Tiger.\n\nBy framing Luffy's awakening not as cold destructive fury, but as joyous laughter that frees the oppressed, Oda reaffirmed the core soul of One Piece: true strength is the power to make others smile in the face of tyranny.",
       "relatedIds": [
@@ -2227,7 +2227,7 @@ const FANDOM_DATA = {
       "author": "Marcus Vance",
       "date": "August 30, 2026",
       "readTime": "5 min read",
-      "image": "images/Frieren Northen Land.jpg",
+      "image": "/images/Frieren Northen Land.jpg",
       "summary": "Examining how Madhouse's masterclass adaptation transformed fleeting moments of memory and grief into an extraordinary meditation on time.",
       "content": "In an era dominated by high-octane battle shonen and power-fantasy isekai, Frieren: Beyond Journey's End dared to begin where most stories finish: after the Demon King has already fallen.\n\nAdapted with breathtaking sensitivity by Studio Madhouse and director Keiichiro Saito, the series captures the melancholic beauty of an elf whose perception of time distances her from mortals. Every quiet conversation, mundane spell for turning sweet grapes sour, and sunrise shared with companions becomes a profound tribute to humanity's fleeting lives.\n\nBy balancing tranquil pastoral pacing with devastatingly precise magical combat, Frieren proved that audiences yearn for emotional depth, quiet reflection, and patient worldbuilding.",
       "relatedIds": [
@@ -2248,7 +2248,7 @@ const FANDOM_DATA = {
       "author": "Aoi Tanaka",
       "date": "September 15, 2026",
       "readTime": "8 min read",
-      "image": "images/Top 10 Fall.jpg",
+      "image": "/images/Top 10 Fall.jpg",
       "summary": "Our curated breakdown of the most anticipated television broadcasts, streaming exclusives, and sleeper hits hitting screens this autumn.",
       "content": "The Fall 2026 broadcast season is shaping up to be one of the most competitive in recent history. To help you navigate the packed schedule, our editorial team has compiled the top essential picks across every genre.\n\nLeading the vanguard is the highly anticipated continuation of Chainsaw Man's Reze saga, accompanied by the cinematic return of Bleach: Thousand-Year Blood War's final conflict. For mystery buffs, the psychological neo-noir 'Midnight in Neo-Tokyo' promises to captivate cyber-thriller fans, while slice-of-life enthusiasts can look forward to 'The Baker of Kamakura'.",
       "relatedIds": [
@@ -2375,7 +2375,7 @@ const FANDOM_DATA = {
       "author": "Gabriel Thorne",
       "date": "September 19, 2026",
       "readTime": "8 min read",
-      "image": "images/trending-gaming.jpg",
+      "image": "/images/trending-gaming.jpg",
       "summary": "Deconstructing the spatial psychology and archaeological mystery of the Lands Between and the Land of Shadow.",
       "content": "Most modern open-world titles treat terrain as a map filled with checklist icons. FromSoftware, under the guidance of Hidetaka Miyazaki, approaches world design as an archaeologist's excavation.\n\nIn Elden Ring, players are not passively told about the Shattering; they deduce it through crumbling Colosseums, cracked stone giants buried in cliffsides, and the golden canopy of the Erdtree looming over every horizon. By respecting the player's intelligence and curiosity, FromSoftware created a world that feels thousands of years old, lived-in, and breathtakingly perilous.",
       "relatedIds": [
@@ -2398,7 +2398,7 @@ const FANDOM_DATA = {
       "author": "Samantha Cole",
       "date": "September 14, 2026",
       "readTime": "7 min read",
-      "image": "images/Grand Theft Auto VI and the Next Leap in Open-World Simulation.jpg",
+      "image": "/images/Grand Theft Auto VI and the Next Leap in Open-World Simulation.jpg",
       "summary": "A deep technical preview into the RAGE 9 engine and how Rockstar intends to redefine simulated living societies.",
       "content": "Thirteen years after Grand Theft Auto V conquered the entertainment industry, Rockstar Games is preparing to unleash GTA VI upon the world. The return to Leonida and Vice City represents more than an upgrade in texture fidelity; it is an unprecedented leap in behavioral systemic simulation.\n\nPatents filed by Rockstar reveal dynamic social media integration, volumetric water physics for the Everglades, realistic vehicular damage deformation, and AI pedestrians whose routines respond dynamically to ambient weather, player reputation, and law enforcement escalation.",
       "relatedIds": [
@@ -2420,7 +2420,7 @@ const FANDOM_DATA = {
       "author": "Gabriel Thorne",
       "date": "September 02, 2026",
       "readTime": "6 min read",
-      "image": "images/soul.jpg",
+      "image": "/images/soul.jpg",
       "summary": "Analyzing why players find genuine catharsis in high difficulty, stamina management, and mastery of boss patterns.",
       "content": "When Demon's Souls was rejected by Sony executives in 2009 for being 'unplayable', nobody anticipated it would birth the defining action genre of the 21st century. Today, developers from Seoul to Stockholm draw inspiration from bonfire checkpoints, stamina management, and deliberate attack telegraphs.\n\nThe appeal lies in authentic accomplishment. In a gaming landscape saturated with auto-aim and hand-holding quest markers, Soulslikes demand total presence, rewarding patience with unforgettable triumphs.",
       "relatedIds": [
@@ -2441,7 +2441,7 @@ const FANDOM_DATA = {
       "author": "Kenji Sato",
       "date": "August 25, 2026",
       "readTime": "6 min read",
-      "image": "images/The Resurgence of the JRPG.jpg",
+      "image": "/images/The Resurgence of the JRPG.jpg",
       "summary": "How modern UI design, acid-jazz soundtracks, and deep party synergies made turn-based roleplaying irresistible once again.",
       "content": "For a decade, industry pundits claimed turn-based combat was obsolete. Atlus and Square Enix proved those predictions spectacularly wrong. By infusing turn-based combat with kinetic camera sweeps, tactile controller vibrations, and ultra-stylish menus, modern JRPGs feel faster and more cerebral than conventional hack-and-slash games.",
       "relatedIds": [
@@ -2568,7 +2568,7 @@ const FANDOM_DATA = {
       "author": "Julian Cross",
       "date": "September 17, 2026",
       "readTime": "7 min read",
-      "image": "images/trending-movies.jpg",
+      "image": "/images/trending-movies.jpg",
       "summary": "Examining the technical grandeur of 15-perf 70mm film projection and why film purists insist digital sensors still cannot match photochemical depth.",
       "content": "For over a decade, theatrical exhibition was proclaimed dead by digital evangelists. Then came the cinematic double-punch of Oppenheimer and Dune: Part Two, where audiences booked plane tickets and lined up at 4 AM just to experience authentic 15/70mm IMAX prints.\n\nWhat makes 70mm projection so magical? With a theoretical resolution exceeding 18,000 horizontal pixels, 15-perf IMAX film captures organic grain, deep optical shadows, and color nuance that digital sensors still struggle to replicate. When projected onto eight-story silver screens, the viewer's peripheral vision is completely consumed.\n\nDirectors like Christopher Nolan and Denis Villeneuve proved that if filmmakers deliver an uncompromised sensory spectacle, audiences will enthusiastically champion the theatrical communion.",
       "relatedIds": [
@@ -2591,7 +2591,7 @@ const FANDOM_DATA = {
       "author": "Elena Rostova",
       "date": "September 08, 2026",
       "readTime": "6 min read",
-      "image": "images/The Architecture of Arakkis.jpg",
+      "image": "/images/The Architecture of Arakkis.jpg",
       "summary": "How practical location filming in Jordan and Abu Dhabi combined with brutalist architectural philosophy to ground Frank Herbert's epic.",
       "content": "Frank Herbert's 1965 masterpiece was once considered unfilmable. Denis Villeneuve's triumph lay in treating Arrakis not as green-screen fantasy, but as an ancient, harsh geopolitical reality.\n\nFrom the micro-ribbed stillsuits designed for genuine desert heat dissipation to the monolithic obsidian architecture of the Harkonnen homeworld Giedi Prime (shot with infrared cameras to render human skin paper-white), every aesthetic choice served cultural logic and environmental hostility.",
       "relatedIds": [
@@ -2613,7 +2613,7 @@ const FANDOM_DATA = {
       "author": "Julian Cross",
       "date": "August 28, 2026",
       "readTime": "6 min read",
-      "image": "images/The Batman and Neo-Noir.jpg",
+      "image": "/images/The Batman and Neo-Noir.jpg",
       "summary": "Analyzing how Matt Reeves drew from 1970s investigative thrillers like Klute and Chinatown to ground Bruce Wayne in detective grime.",
       "content": "Where prior superhero adaptations opted for glossy action spectacles, Matt Reeves' The Batman plunged into the asphalt rain and neon shadows of 1970s neo-noir. Cinematographer Greig Fraser utilized custom detuned anamorphic lenses to soften edges and create an intimate, tactile visual texture.\n\nHere, Gotham is not a generic skyline; it is a claustrophobic maze of rain-slicked alleys, crumbling subway stations, and smoky underworld clubs, establishing Bruce Wayne not as an invincible god, but as an obsessive detective scarred by trauma.",
       "relatedIds": [
@@ -2636,7 +2636,7 @@ const FANDOM_DATA = {
       "author": "Marcus Vance",
       "date": "August 15, 2026",
       "readTime": "7 min read",
-      "image": "images/Practical Magic.jpg",
+      "image": "/images/Practical Magic.jpg",
       "summary": "Exploring why weightless computer-generated digital doubles failed to evoke genuine peril, leading filmmakers back to real steel and explosions.",
       "content": "For two decades, Hollywood succumbed to the siren call of full CGI environments and digital human stunt doubles. However, the human brain is remarkably adept at detecting missing gravitational physics and mismatched lighting cues.\n\nToday, films like George Miller's Furiosa and Tom Cruise's death-defying stunt sequences demonstrate the raw visceral impact of genuine momentum, real fire, and tangible physical courage.",
       "relatedIds": [
@@ -2763,7 +2763,7 @@ const FANDOM_DATA = {
       "author": "Julian Cross",
       "date": "September 16, 2026",
       "readTime": "7 min read",
-      "image": "images/trending-tvshows.jpg",
+      "image": "/images/trending-tvshows.jpg",
       "summary": "From The Sopranos and The Wire to Succession and Shogun, exploring the narrative freedom of long-form television.",
       "content": "When television was constrained to episodic syndication, characters were forced to reset to zero at the end of every hour. The modern Golden Age shattered that limitation, offering creators the space of an eight-to-ten-hour novel.\n\nShowrunners can now devote entire episodes to meditative side-quests, subtle family betrayals, and deep character psychology. In series like Succession and Shogun, a single conversation across a dinner table carries more dramatic stakes than a generic 200-million-dollar CGI blockbuster showdown.",
       "relatedIds": [
@@ -2786,7 +2786,7 @@ const FANDOM_DATA = {
       "author": "Marcus Vance",
       "date": "September 09, 2026",
       "readTime": "6 min read",
-      "image": "images/house of the dragon.jpg",
+      "image": "/images/house of the dragon.jpg",
       "summary": "Analyzing George R.R. Martin's Fire & Blood adaptation and the tragic ideological rupture between Rhaenyra and Alicent.",
       "content": "Adapting George R.R. Martin's Fire & Blood presented a unique challenge: the source material is written as an unreliable historical compilation with conflicting eyewitness accounts. Showrunner Ryan Condal seized on this ambiguity to tell the intimate human tragedy beneath the propaganda.\n\nBy treating the Targaryen civil war as a slow-motion unraveling of family love poisoned by patriarchal ambition, the series delivers intense emotional depth alongside breathtaking dragon combat.",
       "relatedIds": [
@@ -2809,7 +2809,7 @@ const FANDOM_DATA = {
       "author": "Samantha Cole",
       "date": "August 29, 2026",
       "readTime": "6 min read",
-      "image": "images/mind flayer.jpg",
+      "image": "/images/mind flayer.jpg",
       "summary": "Breaking down production leaks, episode runtimes, and Vecna's final assault on the real world.",
       "content": "Nearly a decade after four boys on bicycles discovered a telekinetic girl in the woods, Stranger Things prepares for its monumental curtain call. The Duffer Brothers have confirmed that Season 5 will hit the ground running with zero reset time following Hawkins' apocalyptic fracturing.\n\nWith extended feature-length episode runtimes and emotional farewell arcs for the original party, the finale promises to cement the series as Netflix's crown cultural achievement.",
       "relatedIds": [
@@ -2833,7 +2833,7 @@ const FANDOM_DATA = {
       "author": "Julian Cross",
       "date": "August 12, 2026",
       "readTime": "5 min read",
-      "image": "images/The mentalist.jpg",
+      "image": "/images/The mentalist.jpg",
       "summary": "Revisiting how The Mentalist turned a fake psychic's cold-reading tricks into one of network TV's most rewatchable detective formulas, anchored by a decade-long hunt for Red John.",
       "content": "Long before prestige streaming reshaped how detective shows were made, The Mentalist proved a network procedural could still be genuinely clever. At its center was Patrick Jane, a former fake psychic turned CPS consultant, who solved cases not through forensics or gunplay but through sharp observation, cold-reading, and calculated manipulation of suspects into revealing themselves.\n\nWhat set the show apart from the wave of early-2010s crime procedurals was its willingness to let Jane's methods look like performance. Every interrogation played out like a magic trick with the audience let in on the mechanics, turning each episode's climax into a satisfying reveal rather than a simple confession. Simon Baker's effortlessly smug, quietly grieving portrayal gave the gimmick real emotional weight, since Jane's talent for reading people was born directly out of tragedy: the murder of his wife and daughter by the serial killer Red John.\n\nThat serialized revenge plot, threaded carefully through years of case-of-the-week episodes, is what elevated The Mentalist beyond a standard whodunit format. Fans spent seasons piecing together clues about Red John's identity alongside Jane himself, turning casual weekly viewing into long-term appointment television. Even now, the show holds up as a masterclass in balancing self-contained mysteries with a slow-burn mythology arc, a formula many later dramas would try and rarely match."
     },
@@ -2938,7 +2938,7 @@ const FANDOM_DATA = {
       "author": "Min-Ji Park",
       "date": "September 15, 2026",
       "readTime": "8 min read",
-      "image": "images/trending-kpop.jpg",
+      "image": "/images/trending-kpop.jpg",
       "summary": "An extensive analysis of the training academies, cross-genre songwriting camps, and innovative fandom platforms driving K-Pop's global dominance.",
       "content": "What began as an underground collision of American hip-hop and Korean lyricism with Seo Taiji and Boys in 1992 has evolved into the world's most dynamic multimedia music industry.\n\nK-Pop succeeds because it is not merely music; it is a holistic visual, choreographic, and conceptual universe. Music videos feature blockbuster CGI visual effects, choreography requires Olympic-level physical synchronicity, and album packaging is elevated into collector artbooks filled with exclusive photocards and concept lore.\n\nWith groups like BTS addressing the United Nations and BLACKPINK headlining Coachella, Korean pop music has established itself as an enduring pillar of global youth culture.",
       "relatedIds": [
@@ -2962,7 +2962,7 @@ const FANDOM_DATA = {
       "author": "Elena Rostova",
       "date": "September 07, 2026",
       "readTime": "6 min read",
-      "image": "images/Aespa Savage.jpg",
+      "image": "/images/Aespa Savage.jpg",
       "summary": "Exploring the hyperpop synths, dystopian visual storytelling, and digital dual identity that made Armageddon and Supernova global hits.",
       "content": "When aespa debuted with the premise that each human member possesses a virtual 'æ' counterpart residing in the digital realm of Kwangya, traditional critics were skeptical. Four years later, aespa has turned high-concept sci-fi lore into an unstoppable commercial juggernaut.\n\nTracks like 'Armageddon' blend distorted sub-bass hip-hop grooves with theatrical hyperpop synth hooks. By committing completely to futuristic cyberpunk aesthetics and intricate transmedia lore, aespa created a bold aesthetic standard for fourth and fifth-generation K-Pop.",
       "relatedIds": [
@@ -2985,7 +2985,7 @@ const FANDOM_DATA = {
       "author": "Min-Ji Park",
       "date": "August 26, 2026",
       "readTime": "6 min read",
-      "image": "images/new jean.jpg",
+      "image": "/images/new jean.jpg",
       "summary": "How Min Hee-jin and NewJeans rejected hyper-produced fanfare in favor of breezy R&B and authentic adolescent nostalgia.",
       "content": "In the summer of 2022, five young girls dropped the music video for 'Attention' with zero teaser schedule, concept photos, or countdown clocks. Within forty-eight hours, NewJeans had reshaped the sonic landscape of Asian pop music.\n\nBy swapping aggressive synth drops for breezy 90s R&B harmonies, understated UK garage percussion, and natural styling, NewJeans proved that understated elegance and earworm grooves can be far more powerful than sensory overload.",
       "relatedIds": [
@@ -3008,7 +3008,7 @@ const FANDOM_DATA = {
       "author": "David Kim",
       "date": "August 14, 2026",
       "readTime": "5 min read",
-      "image": "images/Choreography.jpg",
+      "image": "/images/Choreography.jpg",
       "summary": "An inside look at 1MILLION Dance Studio and Jam Republic, where urban street dance meets precision stage blocking.",
       "content": "K-Pop performance is celebrated for its surgical geometric precision. Behind every three-minute stage performance are hundreds of hours in mirror-walled basement studios.\n\nChoreographers blend voguing, tutting, waacking, and contemporary urban hip-hop into seamless formations designed to look spectacular both from a stationary arena balcony and on vertical smartphone screens.",
       "relatedIds": [
@@ -3118,7 +3118,7 @@ const FANDOM_DATA = {
       "author": "Arthur Pendelton",
       "date": "September 14, 2026",
       "readTime": "7 min read",
-      "image": "images/trending-comics.jpg",
+      "image": "/images/trending-comics.jpg",
       "summary": "An in-depth retrospective of Jonathan Hickman's infographics, multi-year story arcs, and thematic mastery of comic book cosmology.",
       "content": "In an industry frequently driven by short-term sales gimmicks, Jonathan Hickman operates like a grand architect constructing an immense cathedral. From his legendary Fantastic Four run through Avengers: Time Runs Out and Secret Wars, Hickman weaves intricate narrative tapestries spanning years of publication.\n\nHis recent launch of the new Ultimate Universe demonstrates his peerless ability to revitalize legacy icons. By presenting an older Peter Parker who gains spider-powers after establishing a family with Mary Jane and their children, Hickman restored heart and maturity to Marvel's flagship hero.",
       "relatedIds": [
@@ -3141,7 +3141,7 @@ const FANDOM_DATA = {
       "author": "Julian Cross",
       "date": "September 06, 2026",
       "readTime": "6 min read",
-      "image": "images/DC.jpg",
+      "image": "/images/DC.jpg",
       "summary": "Inside DC's ambitious initiative designed to deliver raw, accessible, and thrilling stories for a new generation of readers.",
       "content": "Superhero comics periodically require a jolt of creative adrenaline. DC's 'All-In' initiative and the parallel Absolute Universe represent the most daring shake-up since the New 52.\n\nIn Absolute Batman, Bruce Wayne is not a billionaire with a high-tech subterranean cave; he is a working-class city engineer who uses industrial demolition gear and sheer grit to fight overwhelming institutional corruption. It is a thrilling return to the raw, visceral spirit of comic books.",
       "relatedIds": [
@@ -3164,7 +3164,7 @@ const FANDOM_DATA = {
       "author": "Arthur Pendelton",
       "date": "August 24, 2026",
       "readTime": "7 min read",
-      "image": "images/revolution.jpg",
+      "image": "/images/revolution.jpg",
       "summary": "From Todd McFarlane's Spawn to Saga and The Walking Dead: celebrating over thirty years of creator-owned autonomy.",
       "content": "In 1992, Todd McFarlane, Jim Lee, Rob Liefeld, and four other elite artists walked out of Marvel Comics with a revolutionary declaration: creators should own what they create, and no publisher should own another creator's intellectual property.\n\nImage Comics transformed the landscape. By providing a platform where artists retain 100% ownership and creative control, Image paved the way for monumental works like Saga, Invincible, and Monstress, proving that creator independence produces timeless literature.",
       "relatedIds": [
@@ -3186,7 +3186,7 @@ const FANDOM_DATA = {
       "author": "Elena Rostova",
       "date": "August 11, 2026",
       "readTime": "5 min read",
-      "image": "images/The Anatomy.jpg",
+      "image": "/images/The Anatomy.jpg",
       "summary": "How balloon placement guides eye velocity and how master inkers define light, shadow, and texture on the page.",
       "content": "A casual reader might glance across a comic page in ten seconds, but every millimeter of that page represents meticulous craftsmanship. Letterers like Todd Klein strategically place speech balloons to guide the reader's eye naturally from panel to panel without obstructing key action.\n\nMeanwhile, inkers provide dynamic weight, cross-hatching shadows, and texture, transforming raw pencil sketches into sharp, reproduction-ready art.",
       "relatedIds": [
@@ -3294,7 +3294,7 @@ const FANDOM_DATA = {
       "author": "Kenji Sato",
       "date": "September 17, 2026",
       "readTime": "8 min read",
-      "image": "images/trending-manga.jpg",
+      "image": "/images/trending-manga.jpg",
       "summary": "An emotional retrospective on Kentaro Miura's peerless cross-hatching, philosophical grief, and how his lifelong best friend is finishing Guts' journey.",
       "content": "When Kentaro Miura passed away in May 2021, the global art community mourned the loss of one of the greatest illustrators in human history. For over thirty years, Berserk had defined dark fantasy with staggering detail, immense emotional weight, and an unyielding message of human perseverance.\n\nYet the story did not end in silence. Miura's lifelong childhood friend Koji Mori and the dedicated artists of Studio Gaga took up the pen, guided by the plot outlines Miura shared with Mori before his death. With every new chapter, Studio Gaga honors Miura's memory, delivering Guts' final struggles with reverence and artistic brilliance.",
       "relatedIds": [
@@ -3317,7 +3317,7 @@ const FANDOM_DATA = {
       "author": "Marcus Vance",
       "date": "September 11, 2026",
       "readTime": "7 min read",
-      "image": "images/tatsuki.png",
+      "image": "/images/tatsuki.png",
       "summary": "How repetitive four-panel timing, wide aspect ratios, and unpredictable emotional shifts make Fujimoto the most exciting mangaka alive.",
       "content": "Tatsuki Fujimoto does not think like a traditional manga artist; he thinks like a cinema director holding a hand-held camera. In masterpieces like Chainsaw Man, Fire Punch, and Goodbye, Eri, Fujimoto frequently employs horizontal 16:9 panels that mimic cinematic widescreen cuts.\n\nBy juxtaposing mundane slice-of-life conversations about breakfast with sudden, absurd bursts of violence, Fujimoto captures the disorienting, tragic, and hilarious nature of human existence with peerless originality.",
       "relatedIds": [
@@ -3340,7 +3340,7 @@ const FANDOM_DATA = {
       "author": "Elena Rostova",
       "date": "September 03, 2026",
       "readTime": "6 min read",
-      "image": "images/Vinland.jpg",
+      "image": "/images/Vinland.jpg",
       "summary": "How the Farmland Arc inverted standard shonen tropes to deliver an unforgettable moral meditation on violence and redemption.",
       "content": "Most historical action stories celebrate violent conquest. Vinland Saga began in the blood-soaked Viking invasions of England, but author Makoto Yukimura had a far deeper moral destination in mind.\n\nWhen Thorfinn was stripped of his daggers and forced to clear woodland roots as an enslaved farmhand, the series reached its transcendent emotional peak. By declaring 'I have no enemies', Thorfinn redefined strength: true heroism is not the capacity to kill, but the courage to break the generational cycle of hatred.",
       "relatedIds": [
@@ -3362,7 +3362,7 @@ const FANDOM_DATA = {
       "author": "Kenji Sato",
       "date": "August 20, 2026",
       "readTime": "6 min read",
-      "image": "images/Inside Shonen.jpg",
+      "image": "/images/Inside Shonen.jpg",
       "summary": "How free online releases, reader comments, and relaxed page constraints allowed creators to produce instant global phenomena.",
       "content": "For fifty years, the print Weekly Shonen Jump magazine was the uncontested kingmaker of Japanese manga. However, the rise of the digital Shonen Jump+ app has introduced a new golden era of creator freedom.\n\nFree from strict physical printing page limits and rigid demographic formulas, creators on Jump+ can experiment with dark comedy, unconventional chapter lengths, and worldwide simultaneous releases on Manga Plus.",
       "relatedIds": [
@@ -3483,32 +3483,32 @@ const FANDOM_DATA = {
       {
         "title": "One Piece: Wano Country Climax Keyframe",
         "caption": "Gear 5 Luffy airborne over Onigashima with lightning aura.",
-         "image": "images/onepiecegl.jpg"
+         "image": "/images/onepiecegl.jpg"
       },
       {
         "title": "Demon Slayer: Infinity Castle Digital Art",
         "caption": "Infinite dimensional geometry rendered with Ufotable compositing.",
-        "image": "images/demonslayer.png"
+        "image": "/images/demonslayer.png"
       },
       {
         "title": "Jujutsu Kaisen: Shibuya Arc Cityscape",
         "caption": "Nighttime Shibuya station enveloped in high-density cursed barrier.",
-       "image": "images/jujutsu.png"
+       "image": "/images/jujutsu.png"
       },
       {
         "title": "Frieren: Sunset over Ende Forest",
         "caption": "Peaceful pastoral concept art celebrating elven solitude.",
-        "image": "images/frierengl.png"
+        "image": "/images/frierengl.png"
       },
       {
         "title": "Attack on Titan: The Colossal Wall",
         "caption": "Humanity's desperate defense behind the stone ramparts.",
-       "image": "images/Attacktitans.png"
+       "image": "/images/Attacktitans.png"
       },
       {
         "title": "Chainsaw Man: Neon Tokyo Rooftops",
         "caption": "Chainsaw hybrid silhouette illuminated by rain-soaked neon signs.",
-         "image": "images/chainsaw.png"
+         "image": "/images/chainsaw.png"
       }
     ],
     "gaming": [
@@ -3713,7 +3713,7 @@ const FANDOM_DATA = {
         "answer": "FandomVerse is a centralized entertainment and fandom discovery portal where you can explore Anime, Gaming, Movies, TV Shows, K-Pop, Comics, and Manga from one unified platform. We bring together news, trailers, character dossiers, merchandise, and live event schedules.",
         "action": {
           "label": "Explore Home",
-          "route": "#home"
+          "route": "/"
         }
       },
       {
@@ -3722,7 +3722,7 @@ const FANDOM_DATA = {
         "answer": "You can explore 7 distinct fandom hubs, read 60+ in-depth articles, inspect 35+ detailed character profiles, watch the latest trailers, listen to podcasts, browse interactive image galleries in a full-screen lightbox, discover upcoming conventions, and build a merchandise wishlist.",
         "action": {
           "label": "Discover Fandoms",
-          "route": "#anime"
+          "route": "/anime"
         }
       },
       {
@@ -3731,7 +3731,7 @@ const FANDOM_DATA = {
         "answer": "FandomVerse Anime includes articles on Studio MAPPA and Ufotable, character dossiers (Luffy, Gojo, Tanjiro, Frieren), interactive photo galleries, latest trailers, convention listings, merchandise, and seasonal release radars.",
         "action": {
           "label": "Explore Anime Hub",
-          "route": "#anime"
+          "route": "/anime"
         }
       },
       {
@@ -3740,7 +3740,7 @@ const FANDOM_DATA = {
         "answer": "Our Gaming Hub covers AAA blockbusters like GTA VI, Elden Ring, and God of War, character archives (Geralt, Master Chief, Kratos), esports tournaments like EVO, playable podcasts, and upcoming game release calendars.",
         "action": {
           "label": "Explore Gaming Hub",
-          "route": "#gaming"
+          "route": "/gaming"
         }
       },
       {
@@ -3749,7 +3749,7 @@ const FANDOM_DATA = {
         "answer": "Head over to the Movies Hub to explore cinematic blockbusters like Dune: Part Two, The Batman, and IMAX epics. You'll find behind-the-scenes features, trailer breakdowns, film festival schedules, and character deep-dives.",
         "action": {
           "label": "Explore Movies Hub",
-          "route": "#movies"
+          "route": "/movies"
         }
       },
       {
@@ -3758,7 +3758,7 @@ const FANDOM_DATA = {
         "answer": "Every category hub has a dedicated 'Popular Characters' section featuring at least 5 character profiles with biographies, traits, and series affiliations. You can also click on any character card to open their full interactive profile modal.",
         "action": {
           "label": "View Characters",
-          "route": "#anime"
+          "route": "/anime"
         }
       },
       {
@@ -3767,7 +3767,7 @@ const FANDOM_DATA = {
         "answer": "We have a dedicated 'Trailers & Media' hub accessible from the navigation or directly on each category page. It brings together video trailers, studio interviews, fan showcases, and playable podcast audio clips.",
         "action": {
           "label": "Open Trailers Hub",
-          "route": "#trailers"
+          "route": "/trailers"
         }
       },
       {
@@ -3776,7 +3776,7 @@ const FANDOM_DATA = {
         "answer": "Browse official fan gear (figures, apparel, vinyl, art prints), click 'Add to Cart', and open your cart drawer from the header. You can adjust quantities and see real-time price calculations. Note: This is a client-side demo cart; no checkout or real payment is processed.",
         "action": {
           "label": "View Merchandise",
-          "route": "#merch"
+          "route": "/merch"
         }
       },
       {
@@ -3785,7 +3785,7 @@ const FANDOM_DATA = {
         "answer": "Click the bookmark icon on any article, character, or event card to save it to your browser's Local Storage. Visit the dedicated Bookmarks page to review them, write personal notes saved for your current session in Session Storage, and export your bookmarks as a formatted list!",
         "action": {
           "label": "Open Bookmarks",
-          "route": "#bookmarks"
+          "route": "/bookmarks"
         }
       },
       {
@@ -3794,7 +3794,7 @@ const FANDOM_DATA = {
         "answer": "FandomVerse features 7 comprehensive categories: 1. Anime, 2. Gaming, 3. Movies, 4. TV Shows, 5. K-Pop, 6. Comics, and 7. Manga. Each hub is fully populated with articles, media, and characters.",
         "action": {
           "label": "Browse All Categories",
-          "route": "#home"
+          "route": "/"
         }
       },
       {
@@ -3803,7 +3803,7 @@ const FANDOM_DATA = {
         "answer": "Check our Events page to see major upcoming pop-culture gatherings like San Diego Comic-Con, Anime Expo, Gamescom, Tokyo Dome MAMA Awards, and New York Comic Con, complete with dates, venues, and status.",
         "action": {
           "label": "View Events Calendar",
-          "route": "#events"
+          "route": "/events"
         }
       },
       {
@@ -3812,7 +3812,7 @@ const FANDOM_DATA = {
         "answer": "Our global search bar is located in the top navigation (press Ctrl+K anywhere to jump to it). It searches across articles, characters, trailers, events, and merchandise in real-time, with filters for category, content type, and sorting options.",
         "action": {
           "label": "Try Search",
-          "route": "#search"
+          "route": "/search"
         }
       }
     ],
@@ -3830,7 +3830,7 @@ const FANDOM_DATA = {
         "response": "FandomVerse has extensive Anime and Manga hubs with character archives, season guides, and trailers.",
         "action": {
           "label": "Explore Anime",
-          "route": "#anime"
+          "route": "/anime"
         }
       },
       {
@@ -3846,7 +3846,7 @@ const FANDOM_DATA = {
         "response": "Check out our Gaming Hub for next-gen previews, speedrunning guides, and hardware analysis.",
         "action": {
           "label": "Explore Gaming",
-          "route": "#gaming"
+          "route": "/gaming"
         }
       },
       {
@@ -3862,7 +3862,7 @@ const FANDOM_DATA = {
         "response": "Our Movies Hub covers auteur cinema, IMAX spectacles, and box office trackers.",
         "action": {
           "label": "Explore Movies",
-          "route": "#movies"
+          "route": "/movies"
         }
       },
       {
@@ -3878,7 +3878,7 @@ const FANDOM_DATA = {
         "response": "Visit our TV Shows Hub for prestige episode recaps, showrunner interviews, and renewal news.",
         "action": {
           "label": "Explore TV Shows",
-          "route": "#tv-shows"
+          "route": "/tv-shows"
         }
       },
       {
@@ -3894,7 +3894,7 @@ const FANDOM_DATA = {
         "response": "The K-Pop Hub features world tour dates, choreography spotlights, and concept album breakdowns.",
         "action": {
           "label": "Explore K-Pop",
-          "route": "#kpop"
+          "route": "/k-pop"
         }
       },
       {
@@ -3909,7 +3909,7 @@ const FANDOM_DATA = {
         "response": "Our Comics Hub showcases graphic novels, indie creators, variant covers, and multiverse arcs.",
         "action": {
           "label": "Explore Comics",
-          "route": "#comics"
+          "route": "/comics"
         }
       },
       {
@@ -3924,7 +3924,7 @@ const FANDOM_DATA = {
         "response": "You can add collectibles, hoodies, and figures to your client-side demo cart and see live totals.",
         "action": {
           "label": "View Merchandise",
-          "route": "#merch"
+          "route": "/merch"
         }
       },
       {
@@ -3937,7 +3937,7 @@ const FANDOM_DATA = {
         "response": "You can save favorite items with Local Storage and attach personal notes with Session Storage.",
         "action": {
           "label": "Open Bookmarks",
-          "route": "#bookmarks"
+          "route": "/bookmarks"
         }
       },
       {
@@ -3951,7 +3951,7 @@ const FANDOM_DATA = {
         "response": "Explore past and upcoming conventions, watch parties, and award galas across all 7 categories.",
         "action": {
           "label": "View Events",
-          "route": "#events"
+          "route": "/events"
         }
       },
       {
@@ -3964,7 +3964,7 @@ const FANDOM_DATA = {
         "response": "I'm the FandomVerse Guide! Ask me about any of our 7 fandom categories, how to use search, bookmarks, or the demo merchandise cart.",
         "action": {
           "label": "Explore Home",
-          "route": "#home"
+          "route": "/"
         }
       }
     ]

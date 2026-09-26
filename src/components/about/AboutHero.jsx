@@ -10,7 +10,7 @@ export default function AboutHero() {
   return (
     <section className="content-section about-heading">
       <video className="about-bg-video" autoPlay muted loop playsInline aria-hidden="true">
-        <source src="videos/bg.mp4" type="video/mp4" />
+        <source src="/videos/bg.mp4" type="video/mp4" />
       </video>
       <div className="about-video-shade" aria-hidden="true" />
 

@@ -11,7 +11,7 @@ export default function ContactHero() {
   return (
     <div className="contact-hero">
       <video className="contact-bg-video" autoPlay muted loop playsInline aria-hidden="true">
-        <source src="videos/QdBZY2fkU-0.mp4" type="video/mp4" />
+        <source src="/videos/QdBZY2fkU-0.mp4" type="video/mp4" />
       </video>
       <div className="contact-video-shade" aria-hidden="true" />
       <div className="container contact-container">

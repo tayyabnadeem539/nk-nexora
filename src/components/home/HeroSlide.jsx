@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import { Link } from 'react-router-dom';
 import { videoSrc } from '../../constants/index.js';
 import { useUI } from '../../context/UIContext.jsx';
 import { ChevronRight, ExpandIcon } from '../common/Icons.jsx';
@@ -34,11 +35,11 @@ const HeroSlide = forwardRef(function HeroSlide({ slide, index, active, videoKey
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4" /></svg>
                 Watch Trailer
               </button>
-              <a href={slide.route} className="btn-hero-secondary" onClick={readFeature}>
+              <Link to={slide.route} className="btn-hero-secondary" onClick={readFeature}>
                 Read Full Feature
                 <ChevronRight size={15} />
-              </a>
-              <a href={slide.route} className="btn-hero-ghost">Explore Hub</a>
+              </Link>
+              <Link to={slide.route} className="btn-hero-ghost">Explore Hub</Link>
             </div>
           </div>
 

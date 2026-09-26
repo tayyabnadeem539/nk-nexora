@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import FANDOM_DATA from '../data/fandomData.js';
 import { ArticleCard, CharacterCard, EventCard, MerchCard, ReleaseCard, TrailerCard } from '../components/cards/index.js';
 import ContentSection from '../components/common/ContentSection.jsx';
@@ -6,6 +7,7 @@ import HeroSlider from '../components/home/HeroSlider.jsx';
 import HubQuickLinks from '../components/home/HubQuickLinks.jsx';
 import PortalTicker from '../components/home/PortalTicker.jsx';
 import TrendingStrip from '../components/home/TrendingStrip.jsx';
+import { PATHS } from '../routes/paths.js';
 
 const { categories = [], articles = [], characters = [], trailers = [], events = [], merchandise = [], releases = [] } = FANDOM_DATA;
 
@@ -18,7 +20,7 @@ const FEATURED = [
 ].filter(Boolean);
 const UPCOMING_EVENTS = events.filter(e => e.status === 'upcoming').slice(0, 4);
 
-const actionLink = (href, label) => <a href={href} className="section-action-link">{label} &rarr;</a>;
+const actionLink = (to, label) => <Link to={to} className="section-action-link">{label} &rarr;</Link>;
 
 export default function HomePage() {
   return (
@@ -39,7 +41,7 @@ export default function HomePage() {
       <ContentSection
         title="Iconic Characters & Dossiers"
         subtitle="Explore biographies, key traits, and series lore for fan-favorite protagonists"
-        action={actionLink('#anime', 'All 35+ Character Profiles')}
+        action={actionLink(PATHS.category('anime'), 'All 35+ Character Profiles')}
       >
         <div className="grid-4">{characters.slice(0, 8).map(char => <CharacterCard key={char.id} char={char} />)}</div>
       </ContentSection>
@@ -48,7 +50,7 @@ export default function HomePage() {
         tone="primary"
         title="Latest Trailers & Media Hub"
         subtitle="High-definition teaser trailers, director interviews, and podcasts"
-        action={actionLink('#trailers', 'Browse All Media')}
+        action={actionLink(PATHS.trailers, 'Browse All Media')}
       >
         <div className="grid-3">{trailers.slice(0, 6).map(tr => <TrailerCard key={tr.id} tr={tr} />)}</div>
       </ContentSection>
@@ -56,7 +58,7 @@ export default function HomePage() {
       <ContentSection
         title="Upcoming Fandom Events"
         subtitle="Conventions, global festivals, and premier award celebrations"
-        action={actionLink('#events', 'Full Events Calendar')}
+        action={actionLink(PATHS.events, 'Full Events Calendar')}
       >
         <div className="grid-2">{UPCOMING_EVENTS.map(ev => <EventCard key={ev.id} ev={ev} />)}</div>
       </ContentSection>
@@ -65,7 +67,7 @@ export default function HomePage() {
         tone="primary"
         title="Official Fan Merchandise"
         subtitle="Explore officially licensed figures, collectibles, apparel, and vinyl editions"
-        action={actionLink('#merch', 'View Full Store')}
+        action={actionLink(PATHS.merch, 'View Full Store')}
       >
         <div className="grid-3">{merchandise.slice(0, 6).map(m => <MerchCard key={m.id} m={m} />)}</div>
       </ContentSection>

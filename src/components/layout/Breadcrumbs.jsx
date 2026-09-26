@@ -1,19 +1,16 @@
 import { Fragment } from 'react';
-import { CRUMB_LINKS } from '../../constants/navigation.js';
+import { Link } from 'react-router-dom';
 import { HomeIcon } from '../common/Icons.jsx';
 
-function crumbHref(crumb) {
-  const c = crumb.toLowerCase();
-  if (c === 'home') return '#home';
-  return CRUMB_LINKS.find(([key]) => c.includes(key))?.[1] || '#home';
-}
-
-/** Breadcrumb trail items (rendered inside a <ul>). */
+/**
+ * Breadcrumb trail items (rendered inside a <ul>).
+ * `trail` comes from hooks/useBreadcrumbs: [{ label, to? }, …] starting with Home.
+ */
 export default function Breadcrumbs({ trail, onNavigate }) {
   if (trail.length <= 1) {
     return (
       <>
-        <li className="breadcrumb-item"><a href="#home" onClick={onNavigate}><HomeIcon /> Home</a></li>
+        <li className="breadcrumb-item"><Link to="/" onClick={onNavigate}><HomeIcon /> Home</Link></li>
         <span className="breadcrumb-separator">/</span>
         <li className="breadcrumb-item active">Portal Central</li>
       </>
@@ -22,10 +19,12 @@ export default function Breadcrumbs({ trail, onNavigate }) {
 
   return trail.map((crumb, idx) => (
     idx === trail.length - 1 ? (
-      <li key={idx} className="breadcrumb-item active">{crumb}</li>
+      <li key={idx} className="breadcrumb-item active">{crumb.label}</li>
     ) : (
       <Fragment key={idx}>
-        <li className="breadcrumb-item"><a href={crumbHref(crumb)} onClick={onNavigate}>{crumb}</a></li>
+        <li className="breadcrumb-item">
+          {crumb.to ? <Link to={crumb.to} onClick={onNavigate}>{crumb.label}</Link> : <span>{crumb.label}</span>}
+        </li>
         <span className="breadcrumb-separator">/</span>
       </Fragment>
     )

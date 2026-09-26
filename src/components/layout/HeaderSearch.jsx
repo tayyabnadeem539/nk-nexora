@@ -1,6 +1,8 @@
 /* Header search box with Ctrl+K shortcut and instant-match dropdown. */
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useUI } from '../../context/UIContext.jsx';
+import { PATHS } from '../../routes/paths.js';
 import { searchQuery } from '../../services/searchService.js';
 import { SearchIcon } from '../common/Icons.jsx';
 
@@ -16,6 +18,7 @@ const itemStyle = {
 
 export default function HeaderSearch() {
   const { openArticleModal, openCharacterModal, openVideoModal } = useUI();
+  const navigate = useNavigate();
   const [term, setTerm] = useState('');
   const [open, setOpen] = useState(false);
   const inputRef = useRef(null);
@@ -50,7 +53,7 @@ export default function HeaderSearch() {
 
   const goToSearchPage = () => {
     setOpen(false);
-    window.location.hash = trimmed ? `#search?q=${encodeURIComponent(trimmed)}` : '#search';
+    navigate(PATHS.search(trimmed));
   };
 
   const openResult = (r) => {
@@ -58,7 +61,7 @@ export default function HeaderSearch() {
     if (r.type === 'article') openArticleModal(r.id);
     else if (r.type === 'character') openCharacterModal(r.id);
     else if (r.type === 'trailer') openVideoModal(r.id);
-    else window.location.hash = `#search?q=${encodeURIComponent(r.id)}`;
+    else navigate(PATHS.search(r.id));
   };
 
   return (

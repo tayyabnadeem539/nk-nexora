@@ -2,6 +2,7 @@ export { default as AboutPage } from './AboutPage.jsx';
 export { default as BookmarksPage } from './BookmarksPage.jsx';
 export { default as CategoryPage } from './CategoryPage.jsx';
 export { default as ContactPage } from './ContactPage.jsx';
+export { default as DeepLinkPage } from './DeepLinkPage.jsx';
 export { default as EventsPage } from './EventsPage.jsx';
 export { default as HomePage } from './HomePage.jsx';
 export { default as MerchandisePage } from './MerchandisePage.jsx';

@@ -1,56 +1,69 @@
 /**
- * Hash route table.
- * resolveRoute('anime') → { element, breadcrumbs, deepLink? }
+ * Application routes (React Router data router).
+ *
+ * Every route may declare `handle.crumbs({ params, searchParams })` returning the
+ * breadcrumb items after "Home" — read by hooks/useBreadcrumbs.js.
  */
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { CATEGORY_HUB_NAMES } from '../constants/index.js';
+import MainLayout from '../layouts/MainLayout.jsx';
 import {
-  AboutPage, BookmarksPage, CategoryPage, ContactPage, EventsPage, HomePage,
-  MerchandisePage, NotFoundPage, SearchPage, TrailersPage
+  AboutPage, BookmarksPage, CategoryPage, ContactPage, DeepLinkPage, EventsPage,
+  HomePage, MerchandisePage, NotFoundPage, SearchPage, TrailersPage
 } from '../pages/index.js';
+import { PATHS } from './paths.js';
 
-const STATIC_ROUTES = {
-  home: { Page: HomePage, crumb: null },
-  trailers: { Page: TrailersPage, crumb: 'Trailers & Media' },
-  events: { Page: EventsPage, crumb: 'Events Calendar' },
-  merch: { Page: MerchandisePage, crumb: 'Official Merchandise' },
-  bookmarks: { Page: BookmarksPage, crumb: 'Saved Bookmarks' },
-  about: { Page: AboutPage, crumb: 'About Us' },
-  contact: { Page: ContactPage, crumb: 'Contact Us' }
-};
+const CATEGORY_IDS = ['anime', 'gaming', 'movies', 'tv-shows', 'k-pop', 'comics', 'manga'];
 
-/** #article/<id> and #character/<id> render Home and open the matching modal. */
-const DEEP_LINKS = { article: 'Articles', character: 'Characters' };
+/** Handle for a route with a single breadcrumb. */
+const crumb = (label, to) => ({ crumbs: () => [{ label, to }] });
 
-export function resolveRoute(path, query) {
-  const [section, id] = path.split('/');
-  if (id && DEEP_LINKS[section]) {
-    return {
-      element: <HomePage />,
-      breadcrumbs: ['Home', DEEP_LINKS[section], id],
-      deepLink: { type: section, id }
-    };
+export const routes = [
+  {
+    path: PATHS.home,
+    element: <MainLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+
+      ...CATEGORY_IDS.map(id => ({
+        path: id,
+        element: <CategoryPage key={id} categoryId={id} />,
+        handle: crumb(CATEGORY_HUB_NAMES[id], PATHS.category(id))
+      })),
+      { path: 'kpop', element: <Navigate to={PATHS.category('k-pop')} replace /> },
+
+      {
+        path: 'search',
+        element: <SearchPage />,
+        handle: {
+          crumbs: ({ searchParams }) => {
+            const q = searchParams.get('q');
+            return [{ label: q ? `Search: "${q}"` : 'Global Search', to: PATHS.search() }];
+          }
+        }
+      },
+      { path: 'trailers', element: <TrailersPage />, handle: crumb('Trailers & Media', PATHS.trailers) },
+      { path: 'events', element: <EventsPage />, handle: crumb('Events Calendar', PATHS.events) },
+      { path: 'merch', element: <MerchandisePage />, handle: crumb('Official Merchandise', PATHS.merch) },
+      { path: 'bookmarks', element: <BookmarksPage />, handle: crumb('Saved Bookmarks', PATHS.bookmarks) },
+      { path: 'about', element: <AboutPage />, handle: crumb('About Us', PATHS.about) },
+      { path: 'contact', element: <ContactPage />, handle: crumb('Contact Us', PATHS.contact) },
+
+      // Shareable links that open an article / character over the home page
+      {
+        path: 'article/:id',
+        element: <DeepLinkPage type="article" />,
+        handle: { crumbs: ({ params }) => [{ label: 'Articles' }, { label: params.id }] }
+      },
+      {
+        path: 'character/:id',
+        element: <DeepLinkPage type="character" />,
+        handle: { crumbs: ({ params }) => [{ label: 'Characters' }, { label: params.id }] }
+      },
+
+      { path: '*', element: <NotFoundPage />, handle: crumb('404 Not Found') }
+    ]
   }
+];
 
-  if (CATEGORY_HUB_NAMES[path]) {
-    const categoryId = path === 'kpop' ? 'k-pop' : path;
-    return {
-      element: <CategoryPage key={categoryId} categoryId={categoryId} />,
-      breadcrumbs: ['Home', CATEGORY_HUB_NAMES[path]]
-    };
-  }
-
-  if (path === 'search') {
-    return {
-      element: <SearchPage initialTerm={query} />,
-      breadcrumbs: ['Home', query ? `Search: "${query}"` : 'Global Search']
-    };
-  }
-
-  const route = STATIC_ROUTES[path];
-  if (route) {
-    const { Page, crumb } = route;
-    return { element: <Page />, breadcrumbs: crumb ? ['Home', crumb] : ['Home'] };
-  }
-
-  return { element: <NotFoundPage />, breadcrumbs: ['Home', '404 Not Found'] };
-}
+export const router = createBrowserRouter(routes);
