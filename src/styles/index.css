@@ -1,0 +1,7 @@
+/* Global stylesheet entry — order matters (base → components → responsive → features) */
+@import './style.css';
+@import './components.css';
+@import './responsive.css';
+@import './hero-slider.css';
+@import './cinema.css';
+@import './toast.css';

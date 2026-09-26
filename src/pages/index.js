@@ -1,0 +1,10 @@
+export { default as AboutPage } from './AboutPage.jsx';
+export { default as BookmarksPage } from './BookmarksPage.jsx';
+export { default as CategoryPage } from './CategoryPage.jsx';
+export { default as ContactPage } from './ContactPage.jsx';
+export { default as EventsPage } from './EventsPage.jsx';
+export { default as HomePage } from './HomePage.jsx';
+export { default as MerchandisePage } from './MerchandisePage.jsx';
+export { default as NotFoundPage } from './NotFoundPage.jsx';
+export { default as SearchPage } from './SearchPage.jsx';
+export { default as TrailersPage } from './TrailersPage.jsx';
