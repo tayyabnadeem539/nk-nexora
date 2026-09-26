@@ -1,0 +1,178 @@
+[
+  {
+    "id": "rel-1",
+    "title": "Chainsaw Man – Reze Arc: The Movie",
+    "category": "anime",
+    "format": "Theatrical Film",
+    "releaseDate": "November 20, 2026",
+    "daysRemaining": 58,
+    "platform": "Global Theaters & IMAX",
+    "image": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+    "status": "Confirmed"
+  },
+  {
+    "id": "rel-2",
+    "title": "Demon Slayer: Infinity Castle Arc – Movie Part 1",
+    "category": "anime",
+    "format": "Theatrical Film",
+    "releaseDate": "December 18, 2026",
+    "daysRemaining": 86,
+    "platform": "Ufotable / Sony Pictures",
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80",
+    "status": "In Production"
+  },
+  {
+    "id": "rel-3",
+    "title": "Grand Theft Auto VI",
+    "category": "gaming",
+    "format": "AAA Video Game",
+    "releaseDate": "October 15, 2026",
+    "daysRemaining": 22,
+    "platform": "PlayStation 5, Xbox Series X|S",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    "status": "Gold Master"
+  },
+  {
+    "id": "rel-4",
+    "title": "The Witcher 4: Polaris",
+    "category": "gaming",
+    "format": "Unreal Engine 5 RPG",
+    "releaseDate": "March 2027",
+    "daysRemaining": 180,
+    "platform": "PC, PS5, Xbox Series X",
+    "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
+    "status": "In Development"
+  },
+  {
+    "id": "rel-5",
+    "title": "Avengers: Doomsday",
+    "category": "movies",
+    "format": "Cinematic Event",
+    "releaseDate": "May 1, 2026",
+    "daysRemaining": 220,
+    "platform": "Marvel Studios / Disney",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+    "status": "Filming"
+  },
+  {
+    "id": "rel-6",
+    "title": "The Batman: Part II",
+    "category": "movies",
+    "format": "Theatrical Release",
+    "releaseDate": "October 2, 2026",
+    "daysRemaining": 9,
+    "platform": "Warner Bros. Pictures",
+    "image": "https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80",
+    "status": "Post-Production"
+  },
+  {
+    "id": "rel-7",
+    "title": "Stranger Things: Season 5 (Series Finale)",
+    "category": "tv-shows",
+    "format": "Full Season (8 Episodes)",
+    "releaseDate": "November 27, 2026",
+    "daysRemaining": 65,
+    "platform": "Netflix Global",
+    "image": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=800&q=80",
+    "status": "Post-Production"
+  },
+  {
+    "id": "rel-8",
+    "title": "House of the Dragon: Season 3",
+    "category": "tv-shows",
+    "format": "Weekly Broadcast",
+    "releaseDate": "June 14, 2026",
+    "daysRemaining": 264,
+    "platform": "HBO / Max",
+    "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+    "status": "Pre-Production"
+  },
+  {
+    "id": "rel-9",
+    "title": "BTS: 2026 World Tour Comeback Album",
+    "category": "k-pop",
+    "format": "Full Studio Album & Tour",
+    "releaseDate": "July 9, 2026",
+    "daysRemaining": 289,
+    "platform": "HYBE Labels / Global Streaming",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "status": "Confirmed"
+  },
+  {
+    "id": "rel-10",
+    "title": "NewJeans: 2nd Studio Album 'Get Natural'",
+    "category": "k-pop",
+    "format": "Physical & Digital LP",
+    "releaseDate": "October 24, 2026",
+    "daysRemaining": 31,
+    "platform": "ADOR / Universal",
+    "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+    "status": "Mastering"
+  },
+  {
+    "id": "rel-11",
+    "title": "Marvel: Ultimate Spider-Man Volume 2 Hardcover",
+    "category": "comics",
+    "format": "Collected Hardcover",
+    "releaseDate": "November 10, 2026",
+    "daysRemaining": 48,
+    "platform": "Marvel Comics",
+    "image": "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=800&q=80",
+    "status": "In Print"
+  },
+  {
+    "id": "rel-12",
+    "title": "DC: Absolute Batman #1",
+    "category": "comics",
+    "format": "Monthly Issue Debut",
+    "releaseDate": "October 9, 2026",
+    "daysRemaining": 16,
+    "platform": "DC Comics",
+    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80",
+    "status": "Shipping to Retail"
+  },
+  {
+    "id": "rel-13",
+    "title": "Berserk: Volume 43 (Standard & Special Edition)",
+    "category": "manga",
+    "format": "Tankobon Volume",
+    "releaseDate": "December 5, 2026",
+    "daysRemaining": 73,
+    "platform": "Hakusensha / Young Animal",
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "status": "Printing"
+  },
+  {
+    "id": "rel-14",
+    "title": "One Piece: Volume 110",
+    "category": "manga",
+    "format": "Tankobon Volume",
+    "releaseDate": "November 4, 2026",
+    "daysRemaining": 42,
+    "platform": "Shueisha Jump Comics",
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80",
+    "status": "Printing"
+  },
+  {
+    "id": "rel-15",
+    "title": "Ghost of Yotei",
+    "category": "gaming",
+    "format": "PlayStation 5 Exclusive",
+    "releaseDate": "Fall 2026",
+    "daysRemaining": 70,
+    "platform": "Sucker Punch / PlayStation Studios",
+    "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+    "status": "Polishing"
+  },
+  {
+    "id": "rel-16",
+    "title": "Jujutsu Kaisen Season 3: The Culling Game",
+    "category": "anime",
+    "format": "Broadcast TV Anime",
+    "releaseDate": "Winter 2027",
+    "daysRemaining": 100,
+    "platform": "MAPPA / Crunchyroll",
+    "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+    "status": "Key Animation"
+  }
+]

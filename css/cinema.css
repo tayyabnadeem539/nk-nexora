@@ -1,0 +1,1047 @@
+/* ==========================================================================
+   FANDOMVERSE 360° GRAND CINEMA & PHOTOREALISTIC IMAX THEATER
+   ========================================================================== */
+
+.fv-theatre {
+  position: relative;
+  overflow: hidden;
+  margin: 14px 0 28px;
+  background: #040507;
+  border: 1px solid #282932;
+  border-radius: 20px;
+  color: #f5f5f5;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.8), 0 0 1px rgba(245, 197, 24, 0.25);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fv-theatre.is-cinema-mode {
+  border-color: #f5c518;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.95), 0 0 45px rgba(245, 197, 24, 0.3);
+}
+
+/* TOP CINEMA BAR & CONTROLS HUD */
+.fv-theatre-top {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(180deg, #111218 0%, #090a0e 100%);
+  border-bottom: 1px solid #202128;
+}
+
+.fv-theatre-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fv-theatre-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5c518;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.fv-theatre-label i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f5c518;
+  box-shadow: 0 0 12px #f5c518;
+  animation: fvBeacon 1.8s ease-in-out infinite;
+}
+
+.fv-theatre-status-pill {
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(245, 197, 24, 0.12);
+  border: 1px solid rgba(245, 197, 24, 0.35);
+  color: #f5c518;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.fv-theatre-compass {
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.fv-theatre-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fv-theatre-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border: 1px solid #33333d;
+  border-radius: 8px;
+  background: #14151c;
+  color: #e2e2e8;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.fv-theatre-btn:hover {
+  border-color: #f5c518;
+  background: #1f202b;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.fv-theatre-btn.active {
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.16);
+  color: #f5c518;
+}
+
+.fv-theatre-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.fv-theatre-exit {
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid rgba(245, 197, 24, 0.5);
+  background: rgba(245, 197, 24, 0.12);
+  color: #f5c518;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fv-theatre.is-playing .fv-theatre-exit {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fv-theatre-exit:hover {
+  background: #f5c518;
+  color: #000;
+  transform: translateX(-3px);
+}
+
+/* ==========================================================================
+   360° 3D SCENE & SPATIAL ENVIRONMENT
+   ========================================================================== */
+.fv-theatre-scene {
+  position: relative;
+  height: clamp(420px, 50vw, 680px);
+  overflow: hidden;
+  perspective: 1150px;
+  perspective-origin: 50% 50%;
+  cursor: grab;
+  touch-action: none;
+  background: #030406;
+  transition: height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  user-select: none;
+}
+
+.fv-theatre.is-cinema-mode .fv-theatre-scene {
+  height: clamp(520px, 64vw, 820px);
+}
+
+.fv-theatre-scene.is-dragging {
+  cursor: grabbing;
+}
+
+/* 360° Spatial Room Container */
+.fv-theatre-room {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 120px;
+  transform:
+    rotateX(var(--fv-camera-pitch, 0deg))
+    rotateY(var(--fv-camera-yaw, 0deg))
+    scale(1.08);
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+.fv-theatre-scene.is-dragging .fv-theatre-room {
+  transition: none;
+}
+
+/* 3D Elements Positioning */
+.fv-theatre-wall,
+.fv-theatre-ceiling,
+.fv-theatre-floor,
+.fv-theatre-screen,
+.fv-theatre-rear-view {
+  position: absolute;
+}
+
+/* LEFT & RIGHT ACOUSTIC WALLS */
+.fv-theatre-wall {
+  top: -15%;
+  bottom: -15%;
+  width: 38%;
+  background:
+    repeating-linear-gradient(90deg, #0e0f14 0 16px, #181922 16px 18px, #0a0b0f 18px 36px);
+  border-inline: 2px solid #282733;
+  pointer-events: none;
+}
+
+.fv-theatre-wall::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 25%, transparent 75%, rgba(0,0,0,0.85) 100%);
+}
+
+.fv-theatre-wall-left {
+  left: -16%;
+  transform: rotateY(60deg);
+  transform-origin: left center;
+}
+
+.fv-theatre-wall-right {
+  right: -16%;
+  transform: rotateY(-60deg);
+  transform-origin: right center;
+}
+
+/* Wall Sconces */
+.fv-wall-sconce {
+  position: absolute;
+  top: 36%;
+  width: 14px;
+  height: 54px;
+  background: linear-gradient(180deg, #3a3224, #f5c518 40%, #f5c518 60%, #3a3224);
+  border-radius: 4px;
+  box-shadow: 0 0 24px rgba(245, 197, 24, 0.7), 0 0 50px rgba(245, 197, 24, 0.35);
+  transition: opacity 1.2s ease, box-shadow 1.2s ease;
+}
+
+.fv-theatre-wall-left .fv-wall-sconce { left: 45%; }
+.fv-theatre-wall-right .fv-wall-sconce { right: 45%; }
+
+.fv-wall-sconce::before,
+.fv-wall-sconce::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+}
+
+.fv-wall-sconce::before {
+  top: -120px;
+  height: 120px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(245, 197, 24, 0.35) 0%, transparent 70%);
+  clip-path: polygon(40% 100%, 60% 100%, 100% 0%, 0% 0%);
+}
+
+.fv-wall-sconce::after {
+  bottom: -120px;
+  height: 120px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 197, 24, 0.35) 0%, transparent 70%);
+  clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+}
+
+/* Wall Surround Speakers */
+.fv-wall-speaker {
+  position: absolute;
+  top: 18%;
+  width: 46px;
+  height: 34px;
+  background: repeating-linear-gradient(0deg, #14141a 0 3px, #0a0b0e 3px 6px);
+  border: 1px solid #302f3a;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 8px #000;
+}
+
+.fv-theatre-wall-left .fv-wall-speaker { left: 40%; }
+.fv-theatre-wall-right .fv-wall-speaker { right: 40%; }
+
+/* Wall Emergency Exit */
+.fv-wall-exit-sign {
+  position: absolute;
+  bottom: 22%;
+  right: 32%;
+  padding: 4px 10px;
+  background: #062211;
+  border: 1px solid #107236;
+  border-radius: 4px;
+  color: #34d399;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 18px rgba(52, 211, 153, 0.65);
+  pointer-events: none;
+}
+
+/* ACOUSTIC CEILING WITH STARLIGHTS */
+.fv-theatre-ceiling {
+  top: -46%;
+  left: 4%;
+  width: 92%;
+  height: 52%;
+  transform: rotateX(-65deg);
+  background:
+    radial-gradient(1px 1px at 15% 20%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 35% 45%, #ffd479, transparent),
+    radial-gradient(1px 1px at 55% 15%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 75% 55%, #ffd479, transparent),
+    radial-gradient(1px 1px at 85% 25%, #fff, transparent),
+    radial-gradient(1px 1px at 25% 75%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 65% 85%, #fff, transparent),
+    repeating-linear-gradient(90deg, #0d0e13 0 24%, #181922 24% 25%, #0d0e13 25% 50%);
+  border-bottom: 2px solid #2d2c37;
+  box-shadow: inset 0 -40px 60px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+}
+
+/* SLOPED CARPET FLOOR WITH AISLE STEP RUNNERS */
+.fv-theatre-floor {
+  bottom: -62%;
+  left: -20%;
+  width: 140%;
+  height: 90%;
+  transform: rotateX(68deg);
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(245, 197, 24, 0.12) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, #130e12 0 14px, #181116 14px 28px),
+    repeating-linear-gradient(-45deg, #0f0b0e 0 14px, #1a1218 14px 28px);
+  border-top: 2px solid #3f2228;
+  box-shadow: inset 0 60px 80px rgba(0,0,0,0.9);
+  pointer-events: none;
+}
+
+.fv-theatre-floor::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 20%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, #38bdf8 30%, #f5c518 50%, #38bdf8 70%, transparent 100%);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   PHOTOREALISTIC REAR VIEW (180° PROJECTION BOOTH)
+   ========================================================================== */
+.fv-theatre-rear-view {
+  inset: -12%;
+  transform: translateZ(-520px) rotateY(180deg);
+  backface-visibility: hidden;
+  pointer-events: none;
+  background: #0a0b0e;
+  overflow: hidden;
+  border: 10px solid #1a1b22;
+  box-shadow: inset 0 0 120px #000;
+}
+
+.fv-theatre-rear-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.fv-theatre-rear-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 35%, transparent 30%, rgba(0, 0, 0, 0.65) 85%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+.fv-rear-badge {
+  padding: 6px 18px;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(245, 197, 24, 0.5);
+  color: #f5c518;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-shadow: 0 2px 6px #000;
+}
+
+/* VOLUMETRIC PROJECTOR BEAM */
+.fv-projector-beam {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  width: 65%;
+  height: 58%;
+  transform: translateX(-50%) translateZ(40px);
+  background: linear-gradient(180deg, rgba(210, 235, 255, 0.16) 0%, rgba(210, 235, 255, 0.02) 80%, transparent 100%);
+  clip-path: polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  mix-blend-mode: screen;
+}
+
+.fv-theatre.is-playing .fv-projector-beam {
+  opacity: 0.85;
+  animation: fvBeamFlicker 4s ease-in-out infinite alternate;
+}
+
+/* ==========================================================================
+   THE CINEMA SCREEN & DYNAMIC AMBILIGHT
+   ========================================================================== */
+.fv-theatre-screen {
+  z-index: 3;
+  top: 7%;
+  left: 14%;
+  width: 72%;
+  height: 70%;
+  overflow: hidden;
+  background: #000;
+  border: 8px solid #181920;
+  outline: 2px solid #555047;
+  border-radius: 8px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.95);
+  transform: translateZ(-160px) rotateX(2deg);
+  transition:
+    transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    top 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    left 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.8s ease;
+  pointer-events: auto;
+}
+
+.fv-theatre.is-playing .fv-theatre-screen {
+  top: 3%;
+  left: 8%;
+  width: 84%;
+  height: 85%;
+  transform: translateZ(50px) rotateX(0deg);
+  box-shadow:
+    0 0 80px rgba(100, 180, 255, 0.35),
+    0 0 160px rgba(245, 197, 24, 0.2),
+    0 25px 90px rgba(0, 0, 0, 0.95);
+}
+
+.fv-theatre-screen video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  cursor: pointer;
+}
+
+/* Play Featured Overlay Button */
+.fv-theatre-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  border: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.88) 85%);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  z-index: 8;
+  transition: opacity 0.5s ease, background 0.3s ease;
+}
+
+.fv-theatre-play:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 85%);
+}
+
+.fv-theatre-play span {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  padding-left: 4px;
+  border: 2px solid #f5c518;
+  border-radius: 50%;
+  color: #f5c518;
+  font-size: 26px;
+  box-shadow: 0 0 35px rgba(245, 197, 24, 0.55);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fv-theatre-play:hover span {
+  transform: scale(1.15) rotate(-6deg);
+  background: rgba(245, 197, 24, 0.22);
+  box-shadow: 0 0 50px rgba(245, 197, 24, 0.85);
+}
+
+.fv-theatre.is-playing .fv-theatre-play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PHOTOREALISTIC RED VELVET CURTAINS
+   ========================================================================== */
+.fv-theatre-curtains {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* TOP ORNATE GOLD & VELVET VALANCE / PELMET */
+.fv-curtain-valance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 9;
+  background-image: url('../images/cinema-curtains.jpg');
+  background-size: 100% auto;
+  background-position: center top;
+  border-bottom: 3px solid #d4af37;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fv-curtain-valance-title {
+  padding: 4px 16px;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  color: #f7df6e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px #000, 0 0 15px rgba(247, 223, 110, 0.6);
+}
+
+/* LEFT & RIGHT CURTAIN PANELS */
+.fv-curtain-left,
+.fv-curtain-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50.5%;
+  z-index: 7;
+  background-image: url('../images/cinema-curtains.jpg');
+  background-size: 200% 100%;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.85), 0 10px 40px #000;
+  transition: transform 1.4s cubic-bezier(0.25, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.fv-curtain-left {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+  border-right: 2px solid #d4af37;
+}
+
+.fv-curtain-right {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+  border-left: 2px solid #d4af37;
+}
+
+/* Hanging Golden Tassels */
+.fv-curtain-tassel {
+  position: absolute;
+  top: 45%;
+  width: 22px;
+  height: 70px;
+  z-index: 10;
+  background: linear-gradient(180deg, #d4af37 0%, #855f10 80%, #ffd978 100%);
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+  transition: transform 1.4s ease;
+}
+
+.fv-curtain-tassel-left { left: 10px; transform-origin: top center; }
+.fv-curtain-tassel-right { right: 10px; transform-origin: top center; }
+
+/* CURTAINS OPEN STATE (SHOWTIME) */
+.fv-theatre.curtains-open .fv-curtain-left {
+  transform: translateX(-95%) scaleX(0.08);
+}
+
+.fv-theatre.curtains-open .fv-curtain-right {
+  transform: translateX(95%) scaleX(0.08);
+}
+
+.fv-theatre.curtains-open .fv-curtain-tassel-left {
+  transform: rotate(22deg);
+}
+
+.fv-theatre.curtains-open .fv-curtain-tassel-right {
+  transform: rotate(-22deg);
+}
+
+/* ==========================================================================
+   HALL LIGHTS DIMMING (SHOWTIME)
+   ========================================================================== */
+.fv-theatre.is-lights-dim .fv-wall-sconce {
+  opacity: 0.12;
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.2);
+}
+
+.fv-theatre.is-lights-dim .fv-wall-sconce::before,
+.fv-theatre.is-lights-dim .fv-wall-sconce::after {
+  opacity: 0.08;
+}
+
+.fv-theatre.is-lights-dim .fv-theatre-ceiling {
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   PHOTOREALISTIC AUDIENCE VIEWPORT
+   ========================================================================== */
+.fv-theatre-audience {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.fv-theatre-audience-real {
+  position: absolute;
+  bottom: -4px;
+  left: -2%;
+  right: -2%;
+  height: 52%;
+  transform: translateZ(240px) translateY(12px) scale(1.06);
+  pointer-events: none;
+  transition: filter 0.8s ease, transform 0.8s ease;
+  animation: fvAudienceBreathe 6s ease-in-out infinite alternate;
+}
+
+.fv-audience-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  filter: brightness(0.7) contrast(1.15);
+  transition: filter 0.8s ease;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 18%, #000 35%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 18%, #000 35%);
+}
+
+/* Dynamic Screen Rim Light on Real Audience */
+.fv-theatre.is-playing .fv-audience-real-img {
+  filter: brightness(0.92) contrast(1.1) drop-shadow(0 -4px 14px rgba(160, 200, 255, 0.4));
+}
+
+/* ==========================================================================
+   DETAILS BAR, PICKS & SEARCH
+   ========================================================================== */
+.fv-theatre-details {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 24px;
+  background: #0c0d12;
+  border-top: 1px solid #1f2026;
+}
+
+.fv-theatre-kicker {
+  color: #f5c518;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.fv-theatre-details h2 {
+  margin: 4px 0 0;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.3;
+  color: #fff;
+}
+
+.fv-theatre-hint {
+  color: #9ca3af;
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* PICKS CAROUSEL */
+.fv-theatre-picks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 32px;
+}
+
+.fv-theatre-pick {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid #292834;
+  border-radius: 12px;
+  background: #111218;
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+
+.fv-theatre-pick:hover {
+  transform: translateY(-4px);
+  border-color: #f5c518;
+  background: #1a1b24;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.fv-theatre-pick.is-selected {
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.08);
+}
+
+.fv-theatre-pick img {
+  width: 76px;
+  height: 54px;
+  flex: none;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fv-theatre-pick span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+
+.fv-theatre-pick small {
+  color: #f5c518;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.fv-theatre-pick strong {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #f1f1f5;
+}
+
+.fv-theatre-pick b {
+  margin-left: auto;
+  color: #f5c518;
+  font-size: 13px;
+}
+
+.fv-theatre-filters {
+  margin-bottom: 24px;
+}
+
+/* TRAILER SEARCH */
+.fv-trailer-search {
+  margin: 8px 0 24px;
+  padding: 22px;
+  border: 1px solid #2b2a36;
+  border-radius: 16px;
+  background: #101116;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.fv-trailer-search > label {
+  display: block;
+  margin-bottom: 12px;
+  color: #f5c518;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.fv-trailer-search-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border: 1px solid #383642;
+  border-radius: 10px;
+  background: #08090d;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fv-trailer-search-field:focus-within {
+  border-color: #f5c518;
+  box-shadow: 0 0 16px rgba(245, 197, 24, 0.25);
+}
+
+.fv-trailer-search-field > span {
+  color: #f5c518;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.fv-trailer-search-field input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+}
+
+.fv-trailer-search-field input::placeholder {
+  color: #7b7e88;
+}
+
+.fv-trending-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.fv-trending-line > span {
+  color: #8f929d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.fv-trending-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fv-trending-chips button {
+  padding: 6px 12px;
+  border: 1px solid #373642;
+  border-radius: 99px;
+  background: #15161e;
+  color: #e2e2e8;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fv-trending-chips button:hover {
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.12);
+  color: #f5c518;
+  transform: translateY(-2px);
+}
+
+.fv-trailer-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.fv-trailer-results:empty {
+  display: none;
+}
+
+.fv-result-count {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: #9ea1ad;
+  font-size: 12px;
+}
+
+.fv-trailer-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #2a2933;
+  border-radius: 10px;
+  background: #14151e;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.fv-trailer-result:hover {
+  border-color: #f5c518;
+  background: #1c1d28;
+  transform: translateY(-2px);
+}
+
+.fv-trailer-result img {
+  width: 72px;
+  height: 50px;
+  flex: none;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.fv-trailer-result span {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fv-trailer-result strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.fv-trailer-result small {
+  color: #9a9ca6;
+  font-size: 10px;
+}
+
+.fv-trailer-result b {
+  flex: none;
+  color: #f5c518;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   ANIMATIONS & RESPONSIVE DESIGN
+   ========================================================================== */
+@keyframes fvBeacon {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.85); }
+}
+
+@keyframes fvAudienceBreathe {
+  0% { transform: translateZ(240px) translateY(12px) scale(1.06); }
+  100% { transform: translateZ(240px) translateY(9px) scale(1.06); }
+}
+
+@keyframes fvBeamFlicker {
+  0% { opacity: 0.75; }
+  40% { opacity: 0.9; }
+  80% { opacity: 0.7; }
+  100% { opacity: 0.85; }
+}
+
+@media (max-width: 900px) {
+  .fv-theatre-picks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .fv-theatre-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fv-theatre-toolbar {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .fv-theatre-scene {
+    height: 400px;
+  }
+  .fv-theatre-screen {
+    left: 8%;
+    width: 84%;
+    top: 8%;
+    height: 66%;
+  }
+  .fv-theatre.is-playing .fv-theatre-screen {
+    left: 3%;
+    width: 94%;
+    top: 5%;
+    height: 84%;
+  }
+  .fv-theatre-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fv-theatre-hint {
+    text-align: left;
+  }
+  .fv-trailer-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .fv-theatre-picks {
+    grid-template-columns: 1fr;
+  }
+  .fv-theatre-top,
+  .fv-theatre-details {
+    padding: 14px;
+  }
+  .fv-theatre-play {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fv-theatre *,
+  .fv-theatre-pick {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

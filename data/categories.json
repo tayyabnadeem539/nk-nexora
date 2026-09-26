@@ -1,0 +1,174 @@
+[
+  {
+    "id": "anime",
+    "title": "Anime",
+    "tagline": "Japanese Animation, Studio Masterpieces & Seasonal Premieres",
+    "description": "Immerse yourself in world-class anime storytelling, from epic shonen battles and dark fantasy epics to heartwarming slice-of-life adventures. Discover seasonal broadcast guides, legendary creator spotlights, and exclusive character archives.",
+    "banner": "images/anime-bg.png",
+    "color": "#E50914",
+    "icon": "sparkles",
+    "stats": {
+      "articles": 9,
+      "characters": 6,
+      "events": 4,
+      "trailers": 6,
+      "merchandise": 4,
+      "releases": 3
+    },
+    "subgenres": [
+      "Shonen",
+      "Seinen",
+      "Dark Fantasy",
+      "Mecha",
+      "Isekai",
+      "Slice of Life",
+      "Cyberpunk"
+    ]
+  },
+  {
+    "id": "gaming",
+    "title": "Gaming",
+    "tagline": "Next-Gen Releases, RPG Epics, Hardware & Esports",
+    "description": "Your headquarters for comprehensive gaming culture. Explore AAA blockbuster previews, deep indie game retrospectives, esports tournament schedules, speedrunning milestones, and deep franchise worldbuilding.",
+    "banner": "images/gaming-bg.png",
+    "color": "#10B981",
+    "icon": "gamepad",
+    "stats": {
+      "articles": 9,
+      "characters": 6,
+      "events": 4,
+      "trailers": 6,
+      "merchandise": 4,
+      "releases": 4
+    },
+    "subgenres": [
+      "Action RPG",
+      "Soulslike",
+      "Tactical FPS",
+      "Open World",
+      "Survival Horror",
+      "Indie Platformer"
+    ]
+  },
+  {
+    "id": "movies",
+    "title": "Movies",
+    "tagline": "Cinematic Universes, Blockbuster Premieres & Auteur Cinema",
+    "description": "From sprawling sci-fi epics and superhero spectacles to genre-defining thrillers. Get backstage production secrets, director commentaries, box office trackers, and festival award circuits.",
+    "banner": "images/movies-bg.png",
+    "color": "#F59E0B",
+    "icon": "film",
+    "stats": {
+      "articles": 9,
+      "characters": 6,
+      "events": 3,
+      "trailers": 6,
+      "merchandise": 3,
+      "releases": 3
+    },
+    "subgenres": [
+      "Sci-Fi Epic",
+      "Neo-Noir",
+      "Superhero",
+      "Psychological Thriller",
+      "Action Adventure"
+    ]
+  },
+  {
+    "id": "tv-shows",
+    "title": "TV Shows",
+    "tagline": "Prestige Dramas, Streaming Sensations & Episodic Sagas",
+    "description": "Dive deep into modern golden-age television. Detailed episode recaps, showrunner interviews, season renewals, fan lore theories, and community watch parties across major streaming networks.",
+    "banner": "images/tvshows-bg.png",
+    "color": "#8B5CF6",
+    "icon": "tv",
+    "stats": {
+      "articles": 8,
+      "characters": 6,
+      "events": 3,
+      "trailers": 6,
+      "merchandise": 3,
+      "releases": 3
+    },
+    "subgenres": [
+      "High Fantasy",
+      "Dystopian Sci-Fi",
+      "Crime Drama",
+      "Mystery Thriller",
+      "Period Epic"
+    ]
+  },
+  {
+    "id": "k-pop",
+    "title": "K-Pop",
+    "tagline": "Global Idols, Chart-Topping Comebacks & Fandom Culture",
+    "description": "Celebrate the global phenomenon of Korean pop music. Explore world tour dates, comeback concept analyses, choreography breakdowns, member profiles, and lightstick merchandise showcases.",
+    "banner": "images/kpop-bg.png",
+    "color": "#EC4899",
+    "icon": "music",
+    "stats": {
+      "articles": 8,
+      "characters": 6,
+      "events": 3,
+      "trailers": 6,
+      "merchandise": 4,
+      "releases": 3
+    },
+    "subgenres": [
+      "Boy Groups",
+      "Girl Groups",
+      "Soloists",
+      "Dance Pop",
+      "K-HipHop",
+      "R&B"
+    ]
+  },
+  {
+    "id": "comics",
+    "title": "Comics",
+    "tagline": "Iconic Graphic Novels, Multiverse Lore & Indie Spotlights",
+    "description": "Explore the vast universe of western comics, graphic novels, and underground indie press. Follow major crossover arcs, legendary writer/artist runs, rare variant covers, and convention highlights.",
+    "banner": "images/comics-bg.png",
+    "color": "#3B82F6",
+    "icon": "book-open",
+    "stats": {
+      "articles": 8,
+      "characters": 6,
+      "events": 3,
+      "trailers": 6,
+      "merchandise": 3,
+      "releases": 3
+    },
+    "subgenres": [
+      "Marvel Universe",
+      "DC Multiverse",
+      "Dark Fantasy",
+      "Cyberpunk Indie",
+      "Supernatural Noir"
+    ]
+  },
+  {
+    "id": "manga",
+    "title": "Manga",
+    "tagline": "Legendary Serializations, Mangaka Spotlights & Tankobon Editions",
+    "description": "The definitive library for Japanese comic literature. Discover weekly serialized chapters, author retrospectives, collector box sets, award-winning translations, and adaptation announcements.",
+    "banner": "images/manga-bg.png",
+    "color": "#F97316",
+    "icon": "bookmark",
+    "stats": {
+      "articles": 9,
+      "characters": 6,
+      "events": 3,
+      "trailers": 6,
+      "merchandise": 3,
+      "releases": 3
+    },
+    "subgenres": [
+      "Shonen Action",
+      "Dark Fantasy Seinen",
+      "Psychological Thriller",
+      "Cyberpunk Manga",
+      "Historical Drama"
+    ]
+  }
+]
